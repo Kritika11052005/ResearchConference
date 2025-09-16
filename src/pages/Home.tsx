@@ -1,26 +1,55 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Calendar, MapPin, Users, ExternalLink } from 'lucide-react';
 import CountdownTimer from '../components/CountdownTimer';
 
 const Home = () => {
+  // Carousel state
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  // University images array - add your image filenames here
+  const universityImages = [
+    '/Uni3.jpg',
+    '/Uni.jpg',
+    '/Uni2.jpg',
+  ];
+
+  // Auto-rotate carousel every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        (prevIndex + 1) % universityImages.length
+      );
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [universityImages.length]);
+
+
   return (
     <div className="min-h-screen">
-      {/* Hero Section with Background Image Space */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        {/* Background Image Container - Replace with your college building image */}
-        <div className="absolute inset-0">
-          {/* Placeholder for college building background image */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/90 via-blue-700/90 to-indigo-800/90 dark:from-blue-800/90 dark:via-blue-900/90 dark:to-indigo-950/90"></div>
-          {/* 
-            Replace the above div with your college building image:
+      {/* Extended Background with Carousel - covers entire page up to Quick Info */}
+      <div className="absolute inset-0 z-0">
+        {universityImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
             <img 
-              src="/path-to-your-college-building.jpg" 
-              alt="College Main Building" 
+              src={image} 
+              alt={`University Campus ${index + 1}`} 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-blue-900/70 dark:bg-blue-950/80"></div>
-          */}
-        </div>
+          </div>
+        ))}
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/60 dark:bg-black/60"></div>
+      </div>
+
+
+      {/* Hero Section */}
+      <section className="min-h-screen flex items-center justify-center relative z-10">
         
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
@@ -28,58 +57,58 @@ const Home = () => {
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              International Conference on
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-indigo-200">
-                Emerging Technologies
+            <h1 className="text-3xl sm:text-4xl md:text-3xl font-bold text-white mb-4 leading-tight">
+              2026 IEEE 2nd International Conference on
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r text-white">
+                Augmented Reality, Intelligent Systems, and Industrial Automation
+              </span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r text-white">
+                (ARIIA 2026)
               </span>
             </h1>
             
-            <p className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Join leading researchers, industry experts, and innovators for three days of groundbreaking presentations and networking
+            <p className="text-lg sm:text-xl text-white mb-6 max-w-2xl mx-auto">
+              Join researchers and innovators for groundbreaking presentations and networking
             </p>
 
             {/* Conference Details */}
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 mb-12">
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 mb-8">
               <div className="flex items-center space-x-2 text-white">
-                <Calendar size={20} />
-                <span className="text-lg">March 15-17, 2025</span>
+                <Calendar size={18} />
+                <span className="text-base">March 15-17, 2025</span>
               </div>
               <div className="flex items-center space-x-2 text-white">
-                <MapPin size={20} />
-                <span className="text-lg">Tech University Campus</span>
+                <MapPin size={18} />
+                <span className="text-base">Tech University Campus</span>
               </div>
               <div className="flex items-center space-x-2 text-white">
-                <Users size={20} />
-                <span className="text-lg">Hybrid Mode</span>
+                <Users size={18} />
+                <span className="text-base">Hybrid Mode</span>
               </div>
             </div>
 
             {/* Countdown Timer */}
-            <div className="mb-12">
-              <h3 className="text-2xl font-semibold text-white mb-6">Conference Starts In</h3>
+            {/* <div className="mb-8">
+              <h3 className="text-xl font-semibold text-white mb-4">Conference Starts In</h3>
               <CountdownTimer targetDate="2025-03-15T09:00:00" />
-            </div>
+            </div> */}
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="group flex items-center space-x-2 px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+              <button className="group flex items-center space-x-2 px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 <span>Register Now</span>
-                <ExternalLink size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
+                <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
               </button>
-              <button className="group flex items-center space-x-2 px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105">
-                <span>Submit Paper</span>
-                <ExternalLink size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
+              
             </div>
           </div>
         </div>
       </section>
 
       {/* Quick Info Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-gray-50 dark:bg-gray-800 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">

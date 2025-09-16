@@ -9,26 +9,30 @@ const Navigation = () => {
   const location = useLocation();
 
   const navItems = [
-    { id: 'home', label: 'Home', path: '/' },
-    { id: 'about', label: 'Conference', path: '/about' },
-    { id: 'committee', label: 'Committee', path: '/committee' },
-    { id: 'speakers', label: 'Speakers', path: '/speakers' },
-    { id: 'tracks', label: 'Tracks', path: '/tracks' },
-    { id: 'submission', label: 'Submission', path: '/submission' },
-    { id: 'publication', label: 'Publication', path: '/publication' },
-    { id: 'logistics', label: 'Logistics', path: '/logistics' },
-    { id: 'contact', label: 'Contact', path: '/contact' },
+    { id: 'home', label: 'HOME', path: '/' },
+    { id: 'about', label: 'CONFERENCE', path: '/about' },
+    { id: 'committee', label: 'COMITTEE', path: '/committee' },
+    { id: 'speakers', label: 'SPEAKERS', path: '/speakers' },
+    { id: 'tracks', label: 'TRACKS', path: '/tracks' },
+    { id: 'submission', label: 'SUBMISSION', path: '/submission' },
+    { id: 'publication', label: 'PUBLICATION', path: '/publication' },
+    { id: 'logistics', label: 'LOGISTICS', path: '/logistics' },
+    { id: 'contact', label: 'CONTACT', path: '/contact' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 z-50 transition-all duration-300">
+    <nav className="fixed top-0 w-full bg-transparent z-50 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
-            <Link to="/" className="text-xl font-bold text-blue-600 dark:text-blue-400">
-              TechConf 2024
+            <Link to="/" className="flex items-center">
+            <img 
+              src="/logo.png" 
+              alt="Conference Logo" 
+              className="h-16 w-auto"
+            />
             </Link>
           </div>
 
@@ -41,8 +45,8 @@ const Navigation = () => {
                   to={item.path}
                   className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                     isActive(item.path)
-                      ? 'text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400'
-                      : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                      ? 'text-white border-b-2 border-white'
+                      : 'text-white/80 hover:text-white'
                   }`}
                 >
                   {item.label}
@@ -53,13 +57,13 @@ const Navigation = () => {
 
           {/* Theme Toggle and Actions */}
           <div className="flex items-center space-x-4">
-            <button
+            {/* <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+              className="p-2 rounded-lg bg-white/20 text-white hover:bg-white/30 transition-colors duration-200"
               aria-label="Toggle theme"
             >
               {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
-            </button>
+            </button> */}
             
             <button className="hidden sm:flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200">
               <Download size={16} />
@@ -70,7 +74,7 @@ const Navigation = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="p-2 rounded-lg text-white hover:bg-white/20"
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -81,7 +85,7 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-black/80 backdrop-blur-sm border-t border-white/20">
               {navItems.map((item) => (
                 <Link
                   key={item.id}
@@ -89,8 +93,8 @@ const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                   className={`block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors duration-200 ${
                     isActive(item.path)
-                      ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
-                      : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800'
+                      ? 'text-white bg-white/20'
+                      : 'text-white/80 hover:text-white hover:bg-white/10'
                   }`}
                 >
                   {item.label}
