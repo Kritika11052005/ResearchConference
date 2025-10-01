@@ -1,22 +1,30 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Moon, Sun, Download } from 'lucide-react';
+import { Menu, X, Moon, Sun, Download, ChevronDown } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isPastHero, setIsPastHero] = useState(false);
-  const { theme, toggleTheme } = useTheme();
+  const [isConferenceDropdownOpen, setIsConferenceDropdownOpen] = useState(false);
+  const [opacity, setOpacity] = useState(1);
+  // const { theme, toggleTheme } = useTheme();
   const location = useLocation();
 
   const navItems = [
     { id: 'home', label: 'HOME', path: '/' },
-    { id: 'about', label: 'CONFERENCE', path: '/about' },
     { id: 'speakers', label: 'SPEAKERS', path: '/speakers' },
     { id: 'tracks', label: 'TRACKS', path: '/tracks' },
     { id: 'submission', label: 'SUBMISSION', path: '/submission' },
     { id: 'publication', label: 'PUBLICATION', path: '/publication' },
     { id: 'contact', label: 'CONTACT', path: '/contact' },
+  ];
+
+  const conferenceDropdownItems = [
+    { id: 'about', label: 'About Us', path: '/about' },
+    { id: 'committee', label: 'Committee', path: '/committee' },
+    { id: 'sponsorship', label: 'Sponsorship', path: '/sponsorship' },
+    { id: 'session-chair', label: 'Session Chair', path: '/session-chair' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -35,6 +43,19 @@ const Navigation = () => {
       window.removeEventListener('scroll', handler as EventListener);
       window.removeEventListener('resize', handler);
     };
+  }, []);
+
+  // Handle opacity based on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      // Increase opacity as we scroll down (opposite of previous logic)
+      const newOpacity = Math.min(1 + scrollY / 300, 1);
+      setOpacity(newOpacity);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navBgClass = isPastHero
@@ -74,7 +95,10 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${navBgClass}`}>
+    <nav 
+      style={{ opacity }}
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${navBgClass}`}
+    >
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo Section */}
@@ -102,13 +126,51 @@ const Navigation = () => {
                   {item.label}
                 </Link>
               ))}
+              
+              {/* Conference Dropdown */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setIsConferenceDropdownOpen(true)}
+                onMouseLeave={() => setIsConferenceDropdownOpen(false)}
+              >
+                <button
+                  className={`flex items-center px-3 py-2 text-sm font-medium transition-colors duration-200 ${getNavLinkClass(conferenceDropdownItems.some(item => isActive(item.path)))}`}
+                >
+                  CONFERENCE
+                  <ChevronDown 
+                    size={16} 
+                    className={`ml-1 transition-transform duration-200 ${isConferenceDropdownOpen ? 'rotate-180' : ''}`} 
+                  />
+                </button>
+                
+                {/* Dropdown Menu */}
+                {isConferenceDropdownOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-slate-800 backdrop-blur-xl border border-slate-200/30 dark:border-slate-700/30 rounded-xl shadow-2xl z-50">
+                    <div className="p-2">
+                      {conferenceDropdownItems.map((item) => (
+                        <Link
+                          key={item.id}
+                          to={item.path}
+                          className={`block w-full text-left px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200 ${
+                            isActive(item.path)
+                              ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30'
+                              : 'text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-700/50'
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
           {/* Theme Toggle and Actions */}
           <div className="flex items-center space-x-3 flex-shrink-0">
             {/* Theme Toggle Button */}
-            <button
+            {/* <button
               onClick={toggleTheme}
               className={`p-2 rounded-lg transition-all duration-200 ${getThemeButtonClass()}`}
               aria-label="Toggle theme"
@@ -127,7 +189,7 @@ const Navigation = () => {
                   }`} 
                 />
               </div>
-            </button>
+            </button> */}
             
             {/* Download Brochure Button */}
             <button className={`hidden sm:flex items-center space-x-2 px-4 py-2 font-medium rounded-lg transition-all duration-200 ${getBrochureButtonClass()}`}>
@@ -170,6 +232,26 @@ const Navigation = () => {
                   {item.label}
                 </Link>
               ))}
+              
+              {/* Conference Section */}
+              <div className="px-4 py-2 text-base font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                Conference
+              </div>
+              {conferenceDropdownItems.map((item) => (
+                <Link
+                  key={item.id}
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`block w-full text-left px-6 py-3 text-base font-medium rounded-lg transition-all duration-200 ${
+                    isActive(item.path)
+                      ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30'
+                      : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              
               <button className="flex items-center space-x-2 w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-200 mt-4 font-medium">
                 <Download size={16} />
                 <span>Download Brochure</span>

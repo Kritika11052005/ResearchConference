@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Calendar, MapPin, Users, ExternalLink, Award, Clock, Globe, Star, Download } from 'lucide-react';
 import { CountdownTimer } from '../components/CountdownTimer';
 import { motion } from 'framer-motion';
+import SponsorImage from '/Sponsor.jpg';
 
 const Home = () => {
   // Carousel state
@@ -88,8 +89,17 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Sponsor Image Section
+      <div className="w-full h-screen">
+        <img
+          src={SponsorImage}
+          alt="Sponsor"
+          className="w-full h-full object-contain"
+        />
+      </div> */}
+
       {/* Conference Highlights Section */}
-      <section className="py-16 bg-gradient-to-br from-white via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-indigo-900/20 relative overflow-hidden -mt-8">
+      <section className="py-12 bg-gradient-to-br from-white via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-indigo-900/20 relative overflow-hidden -mt-8">
         {/* Background Pattern */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl transform translate-x-32 -translate-y-32"></div>
