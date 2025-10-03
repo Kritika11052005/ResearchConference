@@ -16,7 +16,7 @@ const Footer = () => {
                 className="h-12 w-12 mr-4"
               />
               <div>
-                <h3 className="text-2xl font-bold text-blue-400">ARIIA 2026</h3>
+                <h3 className="text-2xl font-bold text-blue-400">ICMAIN 2027</h3>
                 <p className="text-gray-300 text-sm">Conference on Emerging Technologies</p>
               </div>
             </div>

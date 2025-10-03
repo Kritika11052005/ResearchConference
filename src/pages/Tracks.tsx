@@ -1,56 +1,130 @@
-import React from 'react';
-import { Cpu, Database, Shield, Zap, Globe, Brain, Smartphone, Cloud } from 'lucide-react';
-import type { Track } from '../types';
+import { motion } from 'framer-motion';
+import { 
+  Cog, 
+  Brain, 
+  Shield, 
+  Wifi, 
+  Eye, 
+  BarChart3,
+  CheckCircle,
+  ArrowRight
+} from 'lucide-react';
 
 const Tracks = () => {
-  const tracks: Track[] = [
+  const tracks = [
     {
-      id: '1',
-      title: 'Artificial Intelligence & Machine Learning',
-      description: 'Deep learning, neural networks, computer vision, natural language processing, and AI applications across industries.',
-      icon: 'Brain'
+      id: 1,
+      title: "Advances in Engineering and Technology",
+      icon: Cog,
+      color: "from-blue-500 to-blue-600",
+      topics: [
+        "Smart Materials",
+        "Sustainable Engineering",
+        "Renewable Energy Systems",
+        "Green Technologies",
+        "Industrial Automation and Control Systems",
+        "Engineering Applications",
+        "Engineering Design",
+        "Modeling, and Optimization"
+      ]
     },
     {
-      id: '2',
-      title: 'Quantum Computing',
-      description: 'Quantum algorithms, quantum machine learning, quantum cryptography, and practical quantum computing applications.',
-      icon: 'Cpu'
+      id: 2,
+      title: "Artificial Intelligence and Machine Learning",
+      icon: Brain,
+      color: "from-purple-500 to-purple-600",
+      topics: [
+        "Machine Learning and Deep Learning",
+        "Natural Language Processing (NLP)",
+        "Quantum Computing",
+        "Computer Vision",
+        "AI in Agriculture, Healthcare and Smart Cities",
+        "Reinforcement Learning",
+        "Generative AI",
+        "Robotic Process Automation, Intelligent Bots",
+        "Cloud-based Automation",
+        "Big Data, Data Mining and Machine Learning",
+        "Privacy and Security in Automation",
+        "Deep Learning"
+      ]
     },
     {
-      id: '3',
-      title: 'Cybersecurity & Privacy',
-      description: 'Network security, cryptography, blockchain technology, privacy-preserving technologies, and security in IoT.',
-      icon: 'Shield'
+      id: 3,
+      title: "Security and Privacy",
+      icon: Shield,
+      color: "from-red-500 to-red-600",
+      topics: [
+        "Network Security",
+        "Cryptography",
+        "Secure Protocols",
+        "Cyber Threat Intelligence",
+        "Digital Forensics",
+        "Cloud Security",
+        "IoT Security Frameworks",
+        "Zero-Trust Architectures",
+        "Wireless Networks Security",
+        "Privacy-Preserving AI",
+        "Data Integrity and Access Control",
+        "Quantum Cryptography"
+      ]
     },
     {
-      id: '4',
-      title: 'Cloud Computing & Edge Systems',
-      description: 'Distributed computing, edge computing, serverless architectures, and cloud-native technologies.',
-      icon: 'Cloud'
+      id: 4,
+      title: "IoT, Industry 5.0, and Smart Systems",
+      icon: Wifi,
+      color: "from-green-500 to-green-600",
+      topics: [
+        "Internet of Things (IoT)",
+        "Industrial IoT (IIoT)",
+        "Healthcare IoT (HIoT)",
+        "Cyber-Physical Systems",
+        "Digital Manufacturing",
+        "Smart Cities",
+        "Intelligent Infrastructure",
+        "Sensor Networks",
+        "Embedded Intelligence",
+        "Human-Centric Industry 5.0 Models",
+        "Predictive Maintenance",
+        "Automation Systems"
+      ]
     },
     {
-      id: '5',
-      title: 'Internet of Things (IoT)',
-      description: 'Smart devices, sensor networks, industrial IoT, smart cities, and connected systems architecture.',
-      icon: 'Globe'
+      id: 5,
+      title: "Immersive and Intelligent Interfaces (AR/VR, HCI)",
+      icon: Eye,
+      color: "from-orange-500 to-orange-600",
+      topics: [
+        "Augmented Reality",
+        "Artificial Intelligence",
+        "Digital Transformation",
+        "Human Machine Collaboration",
+        "Digital Manufacturing",
+        "Digital Twin",
+        "E-mobility and Additive Manufacturing",
+        "Collaborative Robots",
+        "Predictive Maintenance",
+        "Sustainable and Green Manufacturing",
+        "Data Analytics in Manufacturing",
+        "Cyber-Physical Systems (CPS)",
+        "Automation in Agriculture and Horticulture"
+      ]
     },
     {
-      id: '6',
-      title: 'Mobile & Ubiquitous Computing',
-      description: 'Mobile applications, wearable technology, location-based services, and context-aware computing.',
-      icon: 'Smartphone'
-    },
-    {
-      id: '7',
-      title: 'Big Data & Analytics',
-      description: 'Data mining, predictive analytics, real-time processing, and data visualization techniques.',
-      icon: 'Database'
-    },
-    {
-      id: '8',
-      title: 'Renewable Energy & Smart Grids',
-      description: 'Smart energy systems, renewable energy integration, power management, and sustainable technologies.',
-      icon: 'Zap'
+      id: 6,
+      title: "Simulation, Modeling, and Data Analytics",
+      icon: BarChart3,
+      color: "from-indigo-500 to-indigo-600",
+      topics: [
+        "Computational Modeling",
+        "System Simulation",
+        "Digital Twins",
+        "Virtual Prototyping",
+        "Big Data Analytics",
+        "Predictive Modeling",
+        "Simulation in Manufacturing, Healthcare, and Smart Cities",
+        "High-Performance",
+        "Parallel Computing"
+      ]
     }
   ];
 
@@ -69,63 +143,142 @@ const Tracks = () => {
   };
 
   return (
-    <div className="py-20 bg-gray-50 dark:bg-gray-900 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-            Conference Tracks
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Explore cutting-edge research across multiple domains of emerging technologies.
-            Each track features specialized sessions, workshops, and networking opportunities.
-          </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      {/* Header Section */}
+      <section className="pt-24 pb-16 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {tracks.map((track, index) => (
-            <div
-              key={track.id}
-              className="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="flex items-center mb-4">
-                <div className="w-14 h-14 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {getIcon(track.icon)}
-                </div>
-              </div>
-              
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                {track.title}
-              </h3>
-              
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                {track.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
-            <h2 className="text-2xl font-bold mb-4">
-              Ready to Share Your Research?
-            </h2>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Submit your paper to one of our tracks and join the global conversation on emerging technologies.
-              Early bird submission deadline is approaching soon.
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6">
+              Conference <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Tracks</span>
+            </h1>
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed mb-8">
+              Multidisciplinary Advances in Engineering, Artificial Intelligence, and Network Security
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors duration-200">
-                Submit Your Paper
-              </button>
-              <button className="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-200">
-                View Submission Guidelines
-              </button>
+            <div className="inline-flex items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full text-blue-700 dark:text-blue-300 text-sm font-medium">
+              6 Research Tracks • 50+ Topics • Global Collaboration
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Tracks Grid */}
+      <section className="pb-20 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {tracks.map((track, index) => {
+              const IconComponent = track.icon;
+              return (
+                <motion.div
+                  key={track.id}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col"
+                >
+                  {/* Header */}
+                  <div className={`bg-gradient-to-r ${track.color} p-6`}>
+                    <div className="flex items-center">
+                      <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mr-4">
+                        <IconComponent className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white mb-1">
+                          Track {track.id}
+                        </h3>
+                        <p className="text-white/90 text-sm">
+                          {track.title}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Topics */}
+                  <div className="p-6 flex flex-col flex-1">
+                    <div className="grid grid-cols-1 gap-3 flex-1">
+                      {track.topics.map((topic, topicIndex) => (
+                        <motion.div
+                          key={topicIndex}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.3, delay: topicIndex * 0.05 }}
+                          className="flex items-center group/item hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-2 transition-colors duration-200"
+                        >
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                          <span className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed group-hover/item:text-slate-900 dark:group-hover/item:text-white transition-colors duration-200">
+                            {topic}
+                          </span>
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    {/* Submit Button */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.3 }}
+                      className="mt-6 pt-6 border-t border-slate-200 dark:border-slate-700 flex justify-center"
+                    >
+                      <button className={`w-full max-w-xs flex items-center justify-center px-4 py-3 bg-gradient-to-r ${track.color} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 group-hover:scale-105`}>
+                        Submit to Track {track.id}
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                      </button>
+                    </motion.div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Share Your Research?
+            </h2>
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+              Submit your paper to one of our six specialized tracks and contribute to the advancement of 
+              engineering, AI, and network security research.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Submit Your Paper
+              </button>
+              <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105">
+                Download Guidelines
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 };

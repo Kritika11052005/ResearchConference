@@ -61,15 +61,15 @@ const Home = () => {
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">
-              <span className="block mb-1">2026 IEEE 2nd International Conference on</span>
+              <span className="block mb-1">1st International Conference on</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 font-bold">
-                Augmented Reality, Intelligent Systems,
+                Multidisciplinary Advances in Engineering, Artificial Intelligence
               </span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 font-bold">
-                and Industrial Automation
+                and Network Security
               </span>
               <span className="block text-lg sm:text-xl md:text-2xl mt-2 font-semibold">
-                (ARIIA 2026)
+                (ICMAIN-2027)
               </span>
             </h1>
             
@@ -162,8 +162,8 @@ const Home = () => {
                 <Calendar size={32} className="text-white" />
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">Event Dates</h3>
-              <p className="text-lg text-slate-600 dark:text-slate-400 mb-2">February 24-26, 2026</p>
-              <p className="text-slate-500 dark:text-slate-500">Three days of innovation</p>
+              <p className="text-lg text-slate-600 dark:text-slate-400 mb-2">February 25-26, 2027</p>
+              <p className="text-slate-500 dark:text-slate-500">Two days of innovation</p>
             </div>
             
             <div className="card p-8 group hover:-translate-y-2 text-center">
@@ -171,7 +171,7 @@ const Home = () => {
                 <MapPin size={32} className="text-white" />
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">Venue</h3>
-              <p className="text-lg text-slate-600 dark:text-slate-400 mb-2">MUJ Campus</p>
+              <p className="text-lg text-slate-600 dark:text-slate-400 mb-2">Manipal University Jaipur Campus</p>
               <p className="text-slate-500 dark:text-slate-500">Jaipur, Rajasthan, India</p>
             </div>
             
@@ -196,6 +196,156 @@ const Home = () => {
             <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-6">Conference Countdown</h3>
             <CountdownTimer targetDate="2026-02-24T00:00:00" />
           </motion.div>
+        </div>
+      </section>
+
+      {/* Conference Timeline Section */}
+      <section className="section-padding bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl transform translate-x-32 -translate-y-32"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-400/20 rounded-full blur-3xl transform -translate-x-32 translate-y-32"></div>
+        </div>
+
+        <div className="container-custom relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+              Conference <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Timeline</span>
+            </h2>
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+              Important dates and milestones for ARIIA 2026. Mark your calendar and don't miss these key deadlines.
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              {/* Timeline Line */}
+              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-indigo-600 hidden md:block"></div>
+              
+              {/* Timeline Items */}
+              <div className="space-y-8">
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="relative flex items-center group"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300 z-10">
+                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="ml-8 bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex-1 group-hover:-translate-y-1">
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Call for Papers</h3>
+                    <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">April 4, 2026</p>
+                    <p className="text-slate-600 dark:text-slate-300">Submit your papers to participate in ARIIA 2026</p>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="relative flex items-center group md:flex-row-reverse"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300 z-10">
+                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="mr-8 md:ml-0 ml-8 bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex-1 group-hover:-translate-y-1">
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Last Date of Paper Submission</h3>
+                    <p className="text-green-600 dark:text-green-400 font-semibold mb-2">November 1, 2026</p>
+                    <p className="text-slate-600 dark:text-slate-300">Ensure your paper is submitted before the deadline</p>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="relative flex items-center group"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300 z-10">
+                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="ml-8 bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex-1 group-hover:-translate-y-1">
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Notification of Acceptance</h3>
+                    <p className="text-purple-600 dark:text-purple-400 font-semibold mb-2">November 20, 2026</p>
+                    <p className="text-slate-600 dark:text-slate-300">Authors will be notified about paper acceptance</p>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="relative flex items-center group md:flex-row-reverse"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300 z-10">
+                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="mr-8 md:ml-0 ml-8 bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex-1 group-hover:-translate-y-1">
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Registration Start Date</h3>
+                    <p className="text-orange-600 dark:text-orange-400 font-semibold mb-2">December 25, 2026</p>
+                    <p className="text-slate-600 dark:text-slate-300">Conference registration opens for all participants</p>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="relative flex items-center group"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300 z-10">
+                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="ml-8 bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex-1 group-hover:-translate-y-1">
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Registration End Date</h3>
+                    <p className="text-red-600 dark:text-red-400 font-semibold mb-2">February 1, 2027</p>
+                    <p className="text-slate-600 dark:text-slate-300">Final deadline for conference registration</p>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                  className="relative flex items-center group md:flex-row-reverse"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300 z-10">
+                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="mr-8 md:ml-0 ml-8 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex-1 group-hover:-translate-y-1 border-2 border-indigo-300">
+                    <h3 className="text-xl font-bold mb-2">Last Date of Camera-Ready Paper Submission</h3>
+                    <p className="text-indigo-100 font-semibold mb-2">February 5, 2027</p>
+                    <p className="text-indigo-100">Submit the final version of your paper via Microsoft CMT portal</p>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

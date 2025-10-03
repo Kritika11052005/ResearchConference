@@ -146,7 +146,7 @@ const Speakers = () => {
               Featured <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Speakers</span>
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Meet the distinguished researchers, industry leaders, and visionaries who will be sharing their expertise at ARIIA 2026
+              Meet the distinguished researchers, industry leaders, and visionaries who will be sharing their expertise at ICMAIN 2027
             </p>
           </motion.div>
         </div>
