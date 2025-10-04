@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { useTheme } from '../contexts/ThemeContext';
 
 interface TimeLeft {
   days: number;
@@ -9,6 +10,7 @@ interface TimeLeft {
 
 export const CountdownTimer = ({ targetDate }: { targetDate: string }) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const { theme } = useTheme();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -38,10 +40,14 @@ export const CountdownTimer = ({ targetDate }: { targetDate: string }) => {
           key={unit}
           className="text-center p-4 bg-white/20 dark:bg-gray-800/50 backdrop-blur-sm rounded-lg border border-white/30 dark:border-gray-600"
         >
-          <div className="text-2xl sm:text-3xl font-bold text-white mb-1">
+          <div className={`text-2xl sm:text-3xl font-bold mb-1 border-2 rounded-md p-2 ${
+            theme === 'dark' ? 'text-white border-white' : 'text-black border-black'
+          }`}>
             {value.toString().padStart(2, '0')}
           </div>
-          <div className="text-sm text-white/80 capitalize">
+          <div className={`text-sm capitalize ${
+            theme === 'dark' ? 'text-white/80' : 'text-gray-700'
+          }`}>
             {unit}
           </div>
         </div>

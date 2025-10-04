@@ -8,7 +8,7 @@ const Navigation = () => {
   const [isPastHero, setIsPastHero] = useState(false);
   const [isConferenceDropdownOpen, setIsConferenceDropdownOpen] = useState(false);
   const [opacity, setOpacity] = useState(1);
-  // const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const location = useLocation();
 
   const navItems = [
@@ -64,10 +64,20 @@ const Navigation = () => {
 
   const getNavLinkClass = (isActiveLink: boolean) => {
     if (!isPastHero) {
-      // Over hero section - always white text
-      return isActiveLink
-        ? 'text-white border-b-2 border-white'
-        : 'text-white/90 hover:text-white';
+      // Check if we're on the home page
+      const isHomePage = location.pathname === '/';
+      
+      if (isHomePage) {
+        // Home page over hero section - white text (for both light and dark mode)
+        return isActiveLink
+          ? 'text-white border-b-2 border-white'
+          : 'text-white/90 hover:text-white';
+      } else {
+        // Other pages over hero section - black text in light mode, white in dark mode
+        return isActiveLink
+          ? 'text-black dark:text-white border-b-2 border-black dark:border-white'
+          : 'text-black/90 dark:text-white/90 hover:text-black dark:hover:text-white';
+      }
     }
     
     // Past hero section - theme-aware
@@ -170,7 +180,7 @@ const Navigation = () => {
           {/* Theme Toggle and Actions */}
           <div className="flex items-center space-x-3 flex-shrink-0">
             {/* Theme Toggle Button */}
-            {/* <button
+            <button
               onClick={toggleTheme}
               className={`p-2 rounded-lg transition-all duration-200 ${getThemeButtonClass()}`}
               aria-label="Toggle theme"
@@ -189,7 +199,7 @@ const Navigation = () => {
                   }`} 
                 />
               </div>
-            </button> */}
+            </button>
             
             {/* Download Brochure Button */}
             <button className={`hidden sm:flex items-center space-x-2 px-4 py-2 font-medium rounded-lg transition-all duration-200 ${getBrochureButtonClass()}`}>
