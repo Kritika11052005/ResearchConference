@@ -88,9 +88,10 @@ const Navigation = () => {
     return 'text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400';
   };
 
+  // Updated theme toggle button styling for visibility in light mode
   const getThemeButtonClass = () => {
     if (!isPastHero) {
-      return 'bg-white/20 text-white hover:bg-white/30';
+      return 'bg-gray-200 text-gray-800 hover:bg-gray-300'; // Light mode visibility fix
     }
     
     return 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700';
@@ -102,6 +103,20 @@ const Navigation = () => {
     }
     
     return 'bg-blue-600 text-white hover:bg-blue-700';
+  };
+
+  // Added delay for closing the dropdown menu
+  let dropdownCloseTimeout: NodeJS.Timeout;
+
+  const handleMouseEnter = () => {
+    clearTimeout(dropdownCloseTimeout); // Clear any existing timeout
+    setIsConferenceDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    dropdownCloseTimeout = setTimeout(() => {
+      setIsConferenceDropdownOpen(false);
+    }, 300); // Delay of 300ms before closing
   };
 
   return (
@@ -140,8 +155,8 @@ const Navigation = () => {
               {/* Conference Dropdown */}
               <div 
                 className="relative"
-                onMouseEnter={() => setIsConferenceDropdownOpen(true)}
-                onMouseLeave={() => setIsConferenceDropdownOpen(false)}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
                 <button
                   className={`flex items-center px-3 py-2 text-sm font-medium transition-colors duration-200 ${getNavLinkClass(conferenceDropdownItems.some(item => isActive(item.path)))}`}
