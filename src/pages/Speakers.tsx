@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Linkedin, Twitter, Mail, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Speakers = () => {
   const speakers = [
@@ -249,15 +250,13 @@ const Speakers = () => {
             <p className="text-xl text-white/90 mb-8">
               Submit your research and join these distinguished speakers on stage
             </p>
-            <button
-              onClick={() => {
-                window.location.href = '/registration';
-                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top on navigation
-              }}
+            <Link 
+              to="/registration"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} // Scroll to top on navigation
               className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Submit Your Paper
-            </button>
+            </Link>
           </motion.div>
         </div>
       </section>

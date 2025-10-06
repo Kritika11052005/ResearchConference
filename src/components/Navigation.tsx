@@ -207,17 +207,14 @@ const Navigation = () => {
             </button>
             
             {/* Register Button */}
-            <button 
-              onClick={() => {
-                window.location.href = '/registration';
-                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top on navigation
-              }}
+            <Link 
+              to="/registration"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} // Scroll to top on navigation
               className={`hidden sm:flex items-center space-x-2 px-4 py-2 font-medium rounded-lg transition-all duration-200 ${getBrochureButtonClass()}`}
             >
-              {/* <Download size={16} /> */}
               <span>Register</span>
               <ExternalLink size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-            </button>
+            </Link>
 
             {/* Mobile menu button */}
             <div className="lg:hidden">

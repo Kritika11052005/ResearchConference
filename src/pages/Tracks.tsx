@@ -14,6 +14,7 @@ import {
   BarChart3,
   CheckCircle
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Tracks = () => {
   const tracks = [
@@ -260,15 +261,13 @@ const Tracks = () => {
               engineering, AI, and network security research.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={() => {
-                  window.location.href = '/registration';
-                  window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top on navigation
-                }}
+              <Link 
+                to="/registration"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} // Scroll to top on navigation
                 className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 Submit Your Paper
-              </button>
+              </Link>
               <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105">
                 Download Guidelines
               </button>
