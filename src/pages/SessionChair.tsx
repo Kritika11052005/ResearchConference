@@ -98,7 +98,7 @@ const SessionChair = () => {
               <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"> Chairs</span>
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
-              Lead technical sessions and contribute to the success of ARIIA 2026 as a distinguished session chair
+              Lead technical sessions and contribute to the success of ICMAIN 2027 as a distinguished session chair
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-slate-600 dark:text-slate-300">
               <div className="flex items-center">
@@ -191,7 +191,7 @@ const SessionChair = () => {
               Responsibilities
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              Key duties and expectations for session chairs at ARIIA 2026
+              Key duties and expectations for session chairs at ICMAIN 2027
             </p>
           </motion.div>
 

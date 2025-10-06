@@ -244,7 +244,7 @@ const Speakers = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Want to Present at ARIIA 2026?
+              Want to Present at ICMAIN 2027?
             </h2>
             <p className="text-xl text-white/90 mb-8">
               Submit your research and join these distinguished speakers on stage

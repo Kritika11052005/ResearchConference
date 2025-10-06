@@ -83,7 +83,7 @@ const Committee = () => {
               <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"> Committee</span>
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              Meet the distinguished academics and industry experts leading ARIIA 2026
+              Meet the distinguished academics and industry experts leading ICMAIN 2027
             </p>
           </motion.div>
         </div>
@@ -172,7 +172,7 @@ const Committee = () => {
               Join Our Committee
             </h2>
             <p className="text-blue-100 text-lg mb-8">
-              Interested in contributing to ARIIA 2026? We welcome academic and industry professionals to join our organizing efforts.
+              Interested in contributing to ICMAIN 2027? We welcome academic and industry professionals to join our organizing efforts.
             </p>
             <button className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors duration-300">
               Contact Us

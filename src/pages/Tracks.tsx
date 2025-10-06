@@ -5,6 +5,12 @@ import {
   Shield, 
   Wifi, 
   Eye, 
+  Cpu,
+  Cloud,
+  Smartphone,
+  Database,
+  Zap,
+  Globe,
   BarChart3,
   CheckCircle,
   ArrowRight
