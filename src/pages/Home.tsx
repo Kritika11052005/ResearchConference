@@ -13,8 +13,7 @@ const Home = () => {
   const universityImages = [
     '/Uni3.jpg',
     '/Uni.jpg',
-    '/Uni2.jpg',
-    '/Uni5.jpg'
+    '/Uni2.jpg'
   ];
 
   // Auto-rotate carousel every 5 seconds
