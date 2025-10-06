@@ -4,18 +4,11 @@ import { BookOpen, Award, ExternalLink, Star } from 'lucide-react';
 const Publication = () => {
   const publications = [
     {
-      title: 'IEEE Conference Proceedings',
-      description: 'All accepted full papers will be published in IEEE Xplore Digital Library',
+      title: 'IEEE Paper Forwardings',
+      description: 'All accepted full papers will be forwarded in IEEE Delhi section.',
       features: ['Peer-reviewed', 'Indexed in Scopus', 'DOI assigned', 'Global visibility'],
       impact: 'High Impact',
       color: 'from-blue-500 to-blue-600'
-    },
-    {
-      title: 'Special Journal Issue',
-      description: 'Extended versions of selected papers invited for journal publication',
-      features: ['Impact Factor: 3.2', 'Open Access option', 'Fast review process', 'International reach'],
-      impact: 'Premium Publication',
-      color: 'from-green-500 to-green-600'
     }
   ];
 
@@ -129,7 +122,7 @@ const Publication = () => {
               Winners receive certificates, prizes, and special mention in the proceedings.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <div className="bg-white/20 rounded-lg px-6 py-3">
+              {/*<div className="bg-white/20 rounded-lg px-6 py-3">
                 <div className="text-2xl font-bold">$1,000</div>
                 <div className="text-purple-200 text-sm">Best Paper Award</div>
               </div>
@@ -140,7 +133,7 @@ const Publication = () => {
               <div className="bg-white/20 rounded-lg px-6 py-3">
                 <div className="text-2xl font-bold">$500</div>
                 <div className="text-purple-200 text-sm">Best Poster Award</div>
-              </div>
+              </div>*/}
             </div>
           </div>
         </div>
