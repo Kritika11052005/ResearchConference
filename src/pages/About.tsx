@@ -1,4 +1,5 @@
 import { Target, Globe, Users, Award, CheckCircle, Calendar, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const features = [
@@ -159,17 +160,14 @@ const About = () => {
           <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
             Be part of this exciting journey to explore the future of technology and innovation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4  justify-center">
-            <div className="mb-16 flex flex-col sm:flex-row gap-4  justify-center ">
-            <button 
-              onClick={() => {
-                window.location.href = '/registration';
-                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top on navigation
-              }}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/registration"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} // Scroll to top on navigation
               className="btn-primary"
             >
               Register Now
-            </button>
+            </Link>
             <button className="btn-secondary">
               View Program
             </button>

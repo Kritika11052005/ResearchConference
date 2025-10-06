@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Moon, Sun, Download, ChevronDown } from 'lucide-react';
+import { Menu, X, Moon, Sun, Download, ChevronDown, ExternalLink } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 
 const Navigation = () => {
@@ -207,12 +207,16 @@ const Navigation = () => {
                 />
               </div>
             </button>
-
-            {/* Download Brochure Button */}
-            <button className={`hidden sm:flex items-center space-x-2 px-4 py-2 font-medium rounded-lg transition-all duration-200 ${getBrochureButtonClass()}`}>
-              <Download size={16} />
-              <span>Brochure</span>
-            </button>
+            
+            {/* Register Button */}
+            <Link 
+              to="/registration"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} // Scroll to top on navigation
+              className={`hidden sm:flex items-center space-x-2 px-4 py-2 font-medium rounded-lg transition-all duration-200 ${getBrochureButtonClass()}`}
+            >
+              <span>Register</span>
+              <ExternalLink size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+            </Link>
 
             {/* Mobile menu button */}
             <div className="lg:hidden">

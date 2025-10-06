@@ -1,5 +1,6 @@
 import { FileText, AlertTriangle, CheckCircle, Award, Upload, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Submission = () => {
   const criticalInfo = [
@@ -119,13 +120,14 @@ const Submission = () => {
                 <p className="text-blue-100 mb-6">
                   Submit your full length paper using Microsoft CMT portal
                 </p>
-                <a
-                  href="#"
+                <Link 
+                  to="/registration"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} // Scroll to top on navigation
                   className="inline-flex items-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300"
                 >
                   <span>Submit via CMT</span>
                   <ExternalLink size={18} />
-                </a>
+                </Link>
               </div>
             </motion.div>
 
