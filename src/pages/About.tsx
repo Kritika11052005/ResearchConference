@@ -39,7 +39,7 @@ const About = () => {
         {/* Hero Section */}
         <div className="section-padding text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">
-            About <span className="text-gradient">ARIIA 2026</span>
+            About <span className="text-gradient">ICMAIN 2027</span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto leading-relaxed">
             The International Conference on Augmented Reality, Intelligent Systems, and Industrial Automation
@@ -76,13 +76,13 @@ const About = () => {
             </h2>
             <div className="space-y-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
               <p>
-                ARIIA 2026 is a premier international forum dedicated to advancing research and development 
+                ICMAIN 2027 is a premier international forum dedicated to advancing research and development 
                 in Augmented Reality, Intelligent Systems, and Industrial Automation. Our conference serves 
                 as a catalyst for innovation, bringing together researchers, practitioners, and industry 
                 leaders from around the globe.
               </p>
               <p>
-                With a focus on practical applications and theoretical foundations, ARIIA 2026 provides 
+                With a focus on practical applications and theoretical foundations, ICMAIN 2027 provides 
                 an invaluable platform for sharing cutting-edge research, discussing emerging trends, 
                 and fostering collaborations that drive technological progress.
               </p>

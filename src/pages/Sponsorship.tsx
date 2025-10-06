@@ -116,7 +116,7 @@ const Sponsorship = () => {
               <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"> Opportunities</span>
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
-              Join leading organizations in supporting cutting-edge research and innovation at ARIIA 2026
+              Join leading organizations in supporting cutting-edge research and innovation at ICMAIN 2027
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-slate-600 dark:text-slate-300">
               <div className="flex items-center">

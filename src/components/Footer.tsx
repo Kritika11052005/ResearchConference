@@ -6,13 +6,13 @@ const Footer = () => {
     <footer className="bg-slate-900 dark:bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          
+
           {/* Conference Information */}
           <div>
             <div className="flex items-center mb-6">
-              <img 
-                src="/logo.png" 
-                alt="Conference Logo" 
+              <img
+                src="/logo.png"
+                alt="Conference Logo"
                 className="h-12 w-12 mr-4"
               />
               <div>
@@ -20,12 +20,12 @@ const Footer = () => {
                 <p className="text-gray-300 text-sm">Conference on Emerging Technologies</p>
               </div>
             </div>
-            
+
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Join leading researchers, innovators, and industry experts for groundbreaking 
+              Join leading researchers, innovators, and industry experts for groundbreaking
               presentations and networking opportunities in the future of technology.
             </p>
-            
+
             {/* Event Details */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
@@ -46,7 +46,10 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-blue-400" />
-                <span className="text-gray-300 text-sm">info@ariia2026.com</span>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=researchconferencemuj@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"> <span className="text-gray-300 text-sm">researchconferencemuj@gmail.com</span></a>
               </div>
             </div>
           </div>
@@ -156,7 +159,7 @@ const Footer = () => {
             {/* Copyright */}
             <div className="text-center md:text-right">
               <p className="text-gray-400 text-sm">
-                © 2026 ARIIA Conference. All rights reserved.
+                © 2027 ICMAIN Conference. All rights reserved.
               </p>
               <p className="text-gray-500 text-xs mt-1">
                 Powered by Manipal University Jaipur

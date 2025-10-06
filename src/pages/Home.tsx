@@ -7,7 +7,7 @@ import SponsorImage from '/Sponsor.jpg';
 const Home = () => {
   // Carousel state
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
+
   // University images array - add your image filenames here
   const universityImages = [
     '/Uni3.jpg',
@@ -18,7 +18,7 @@ const Home = () => {
   // Auto-rotate carousel every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
+      setCurrentImageIndex((prevIndex) =>
         (prevIndex + 1) % universityImages.length
       );
     }, 2000);
@@ -33,13 +33,12 @@ const Home = () => {
         {universityImages.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+              }`}
           >
-            <img 
-              src={image} 
-              alt={`University Campus ${index + 1}`} 
+            <img
+              src={image}
+              alt={`University Campus ${index + 1}`}
               className="w-full h-full object-cover"
             />
           </div>
@@ -50,7 +49,7 @@ const Home = () => {
 
       {/* Hero Section */}
       <section className="h-screen flex items-center justify-center relative z-10">
-        
+
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -68,13 +67,21 @@ const Home = () => {
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 font-bold">
                 and Network Security
               </span>
-              <span className="block text-lg sm:text-xl md:text-2xl mt-2 font-semibold">
-                (ICMAIN-2027)
-              </span>
+              <div className="space-y-2">
+                <span className="block text-lg sm:text-xl md:text-2xl font-semibold">
+                  (ICMAIN-2027)
+                </span>
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold rounded-full shadow-md">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                  Hybrid Mode
+                </div>
+              </div>
             </h1>
-            
+
             <p className="text-sm sm:text-base text-white/90 mb-6 max-w-xl mx-auto leading-relaxed">
-              Join leading researchers, innovators, and industry experts for groundbreaking presentations 
+              Join leading researchers, innovators, and industry experts for groundbreaking presentations
               and networking opportunities in the future of technology.
             </p>
 
@@ -123,7 +130,7 @@ const Home = () => {
               Experience three days of innovation, learning, and networking at the forefront of technology
             </p>
           </motion.div>
-          
+
           {/* Quick Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -149,7 +156,7 @@ const Home = () => {
               <div className="text-slate-600 dark:text-slate-400 text-sm font-medium">Countries</div>
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -165,7 +172,7 @@ const Home = () => {
               <p className="text-lg text-slate-600 dark:text-slate-400 mb-2">February 25-26, 2027</p>
               <p className="text-slate-500 dark:text-slate-500">Two days of innovation</p>
             </div>
-            
+
             <div className="card p-8 group hover:-translate-y-2 text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                 <MapPin size={32} className="text-white" />
@@ -174,7 +181,7 @@ const Home = () => {
               <p className="text-lg text-slate-600 dark:text-slate-400 mb-2">Manipal University Jaipur Campus</p>
               <p className="text-slate-500 dark:text-slate-500">Jaipur, Rajasthan, India</p>
             </div>
-            
+
             <div className="card p-8 group hover:-translate-y-2 text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                 <Users size={32} className="text-white" />
@@ -219,7 +226,7 @@ const Home = () => {
               Conference <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Timeline</span>
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              Important dates and milestones for ARIIA 2026. Mark your calendar and don't miss these key deadlines.
+              Important dates and milestones for ICMAIN 2027. Mark your calendar and don't miss these key deadlines.
             </p>
           </motion.div>
 
@@ -227,7 +234,7 @@ const Home = () => {
             <div className="relative">
               {/* Timeline Line */}
               <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-indigo-600 hidden md:block"></div>
-              
+
               {/* Timeline Items */}
               <div className="space-y-8">
                 <motion.div
@@ -245,7 +252,7 @@ const Home = () => {
                   <div className="ml-8 bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex-1 group-hover:-translate-y-1">
                     <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Call for Papers</h3>
                     <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">April 4, 2026</p>
-                    <p className="text-slate-600 dark:text-slate-300">Submit your papers to participate in ARIIA 2026</p>
+                    <p className="text-slate-600 dark:text-slate-300">Submit your papers to participate in ICMAIN 2027</p>
                   </div>
                 </motion.div>
 
@@ -360,7 +367,7 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
-              Why <span className="text-gradient">Attend ARIIA 2026</span>?
+              Why <span className="text-gradient">Attend ICMAIN 2027</span>?
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
               Discover the latest breakthroughs and connect with the brightest minds in technology
@@ -432,7 +439,7 @@ const Home = () => {
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('/api/placeholder/1920/800')] opacity-10"></div>
         </div>
-        
+
         <div className="container-custom text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -444,9 +451,9 @@ const Home = () => {
               Ready to Shape the Future?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-              Join us at ARIIA 2026 and be part of the next generation of technological innovation
+              Join us at ICMAIN 2027 and be part of the next generation of technological innovation
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button className="group flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-gray-900 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
                 <span>Register Now</span>
