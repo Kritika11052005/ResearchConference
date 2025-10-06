@@ -12,8 +12,7 @@ import {
   Zap,
   Globe,
   BarChart3,
-  CheckCircle,
-  ArrowRight
+  CheckCircle
 } from 'lucide-react';
 
 const Tracks = () => {
@@ -235,20 +234,6 @@ const Tracks = () => {
                         </motion.div>
                       ))}
                     </div>
-
-                    {/* Submit Button */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: 0.3 }}
-                      className="mt-6 pt-6 border-t border-slate-200 dark:border-slate-700 flex justify-center"
-                    >
-                      <button className={`w-full max-w-xs flex items-center justify-center px-4 py-3 bg-gradient-to-r ${track.color} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 group-hover:scale-105`}>
-                        Submit to Track {track.id}
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                      </button>
-                    </motion.div>
                   </div>
                 </motion.div>
               );
@@ -275,7 +260,13 @@ const Tracks = () => {
               engineering, AI, and network security research.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <button 
+                onClick={() => {
+                  window.location.href = '/registration';
+                  window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top on navigation
+                }}
+                className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
                 Submit Your Paper
               </button>
               <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105">
