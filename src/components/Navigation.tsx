@@ -4,10 +4,10 @@ import { Menu, X, Moon, Sun, Download, ChevronDown } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isPastHero, setIsPastHero] = useState(false);
-  const [isConferenceDropdownOpen, setIsConferenceDropdownOpen] = useState(false);
-  const [opacity, setOpacity] = useState(1);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [isPastHero, setIsPastHero] = useState<boolean>(false);
+  const [isConferenceDropdownOpen, setIsConferenceDropdownOpen] = useState<boolean>(false);
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
 
@@ -29,41 +29,32 @@ const Navigation = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
-  // Detect when we've scrolled past the initial hero/carousel viewport
+  // Detect when we've scrolled and when we've scrolled past the hero
   useEffect(() => {
-    const NAV_HEIGHT = 88; // h-22
     const handler = () => {
+      const scrollY = window.scrollY;
+      // Becomes fixed after ANY scroll
+      setIsScrolled(scrollY > 0);
+      
+      // Check if we've scrolled past the hero section
+      const NAV_HEIGHT = 80;
       const threshold = Math.max(window.innerHeight - NAV_HEIGHT, 0);
-      setIsPastHero(window.scrollY > threshold);
+      setIsPastHero(scrollY > threshold);
     };
+    
     handler();
     window.addEventListener('scroll', handler, { passive: true });
-    window.addEventListener('resize', handler);
     return () => {
-      window.removeEventListener('scroll', handler as EventListener);
-      window.removeEventListener('resize', handler);
+      window.removeEventListener('scroll', handler);
     };
   }, []);
 
-  // Handle opacity based on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      // Increase opacity as we scroll down (opposite of previous logic)
-      const newOpacity = Math.min(1 + scrollY / 300, 1);
-      setOpacity(newOpacity);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const navBgClass = isPastHero
-    ? 'bg-white/98 dark:bg-slate-900/98 backdrop-blur-xl border-b border-slate-200/30 dark:border-slate-700/30 shadow-xl'
+   const navBgClass = isScrolled
+    ? 'bg-white/50 dark:bg-slate-900/70 backdrop-blur-md border-b border-slate-200/20 dark:border-slate-700/20 shadow-lg'
     : 'bg-transparent';
 
   const getNavLinkClass = (isActiveLink: boolean) => {
-    if (!isPastHero) {
+    if (!isScrolled) {
       // Check if we're on the home page
       const isHomePage = location.pathname === '/';
       
@@ -80,7 +71,7 @@ const Navigation = () => {
       }
     }
     
-    // Past hero section - theme-aware
+    // When scrolled - theme-aware
     if (isActiveLink) {
       return 'text-blue-600 dark:text-blue-400';
     }
@@ -90,7 +81,7 @@ const Navigation = () => {
 
   // Updated theme toggle button styling for dark mode
   const getThemeButtonClass = () => {
-    if (!isPastHero) {
+    if (!isScrolled) {
       return 'bg-slate-100 dark:bg-blue-900 text-slate-700 dark:text-white hover:bg-slate-200 dark:hover:bg-blue-700';
     }
 
@@ -98,7 +89,7 @@ const Navigation = () => {
   };
 
   const getBrochureButtonClass = () => {
-    if (!isPastHero) {
+    if (!isScrolled) {
       return 'bg-yellow-400 text-slate-900 hover:bg-yellow-500';
     }
     
@@ -106,7 +97,7 @@ const Navigation = () => {
   };
 
   // Added delay for closing the dropdown menu
-  let dropdownCloseTimeout: NodeJS.Timeout;
+  let dropdownCloseTimeout: ReturnType<typeof setTimeout>;
 
   const handleMouseEnter = () => {
     clearTimeout(dropdownCloseTimeout); // Clear any existing timeout
@@ -121,8 +112,7 @@ const Navigation = () => {
 
   return (
     <nav 
-      style={{ opacity }}
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${navBgClass}`}
+      className={`${isScrolled ? 'fixed' : 'absolute'} top-0 w-full z-50 transition-all duration-300 ${navBgClass}`}
     >
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -223,12 +213,11 @@ const Navigation = () => {
             </button>
 
             {/* Mobile menu button */}
-            {/* Mobile menu button */}
             <div className="lg:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className={`p-2 rounded-lg transition-all duration-200 ${
-                  isPastHero
+                  isScrolled
                     ? 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                     : 'text-white hover:bg-white/20'
                 }`}
