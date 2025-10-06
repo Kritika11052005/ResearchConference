@@ -88,12 +88,12 @@ const Navigation = () => {
     return 'text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400';
   };
 
-  // Updated theme toggle button styling for visibility in light mode
+  // Updated theme toggle button styling for dark mode
   const getThemeButtonClass = () => {
     if (!isPastHero) {
-      return 'bg-gray-200 text-gray-800 hover:bg-gray-300'; // Light mode visibility fix
+      return 'bg-slate-100 dark:bg-blue-900 text-slate-700 dark:text-white hover:bg-slate-200 dark:hover:bg-blue-700';
     }
-    
+
     return 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700';
   };
 
