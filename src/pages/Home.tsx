@@ -14,6 +14,7 @@ const Home = () => {
     '/Uni3.jpg',
     '/Uni.jpg',
     '/Uni2.jpg',
+    '/Uni5.jpg'
   ];
 
   // Auto-rotate carousel every 5 seconds
@@ -72,7 +73,7 @@ const Home = () => {
                 <span className="block text-lg sm:text-xl md:text-2xl font-semibold">
                   (ICMAIN-2027)
                 </span>
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold rounded-full shadow-md">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-yellow-400 text-slate-900 text-sm font-semibold rounded-full shadow-md">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                   </svg>
@@ -88,7 +89,7 @@ const Home = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-              <Link 
+              <Link
                 to="/registration"
                 className="group flex items-center space-x-2 px-5 py-2.5 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-gray-900 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-sm"
               >
@@ -148,7 +149,7 @@ const Home = () => {
               <div className="text-slate-600 dark:text-slate-400 text-sm font-medium">Attendees</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">50+</div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">30+</div>
               <div className="text-slate-600 dark:text-slate-400 text-sm font-medium">Speakers</div>
             </div>
             <div className="text-center">
@@ -156,7 +157,7 @@ const Home = () => {
               <div className="text-slate-600 dark:text-slate-400 text-sm font-medium">Research Papers</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">30+</div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">10+</div>
               <div className="text-slate-600 dark:text-slate-400 text-sm font-medium">Countries</div>
             </div>
           </motion.div>
@@ -182,7 +183,7 @@ const Home = () => {
                 <MapPin size={32} className="text-white" />
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">Venue</h3>
-              <p className="text-lg text-slate-600 dark:text-slate-400 mb-2">Manipal University Jaipur Campus</p>
+              <p className="text-lg text-slate-600 dark:text-slate-400 mb-2">Manipal University Jaipur</p>
               <p className="text-slate-500 dark:text-slate-500">Jaipur, Rajasthan, India</p>
             </div>
 
@@ -459,7 +460,7 @@ const Home = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link 
+              <Link
                 to="/registration"
                 className="group flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-gray-900 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
               >

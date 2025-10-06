@@ -13,7 +13,11 @@ const Footer = () => {
               <img
                 src="/logo.png"
                 alt="Conference Logo"
-                className="h-12 w-12 mr-4"
+                className="h-16 w-auto object-contain"
+                loading="eager"
+                style={{
+                  imageRendering: 'crisp-edges'
+                }}
               />
               <div>
                 <h3 className="text-2xl font-bold text-blue-400">ICMAIN 2027</h3>

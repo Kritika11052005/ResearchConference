@@ -35,13 +35,13 @@ const Navigation = () => {
       const scrollY = window.scrollY;
       // Becomes fixed after ANY scroll
       setIsScrolled(scrollY > 0);
-      
+
       // Check if we've scrolled past the hero section
       const NAV_HEIGHT = 80;
       const threshold = Math.max(window.innerHeight - NAV_HEIGHT, 0);
       setIsPastHero(scrollY > threshold);
     };
-    
+
     handler();
     window.addEventListener('scroll', handler, { passive: true });
     return () => {
@@ -49,15 +49,15 @@ const Navigation = () => {
     };
   }, []);
 
-   const navBgClass = isScrolled
-    ? 'bg-white/50 dark:bg-slate-900/70 backdrop-blur-md border-b border-slate-200/20 dark:border-slate-700/20 shadow-lg'
+  const navBgClass = isScrolled
+    ? 'bg-white/10 dark:bg-slate-900/70 backdrop-blur-md border-b border-slate-200/20 dark:border-slate-700/20 shadow-lg'
     : 'bg-transparent';
 
   const getNavLinkClass = (isActiveLink: boolean) => {
     if (!isScrolled) {
       // Check if we're on the home page
       const isHomePage = location.pathname === '/';
-      
+
       if (isHomePage) {
         // Home page over hero section - white text (for both light and dark mode)
         return isActiveLink
@@ -70,12 +70,12 @@ const Navigation = () => {
           : 'text-black/90 dark:text-white/90 hover:text-black dark:hover:text-white';
       }
     }
-    
+
     // When scrolled - theme-aware
     if (isActiveLink) {
       return 'text-blue-600 dark:text-blue-400';
     }
-    
+
     return 'text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400';
   };
 
@@ -92,7 +92,7 @@ const Navigation = () => {
     if (!isScrolled) {
       return 'bg-yellow-400 text-slate-900 hover:bg-yellow-500';
     }
-    
+
     return 'bg-blue-600 text-white hover:bg-blue-700';
   };
 
@@ -111,7 +111,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav 
+    <nav
       className={`${isScrolled ? 'fixed' : 'absolute'} top-0 w-full z-50 transition-all duration-300 ${navBgClass}`}
     >
       <div className="w-full px-4 sm:px-6 lg:px-8">
@@ -120,10 +120,15 @@ const Navigation = () => {
           <div className="flex items-center flex-shrink-0">
             <Link to="/" className="flex items-center group">
               <div className="relative">
-                <img 
-                  src="/logo.png" 
-                  alt="Conference Logo" 
-                  className="h-16 w-16 transition-transform duration-300 group-hover:scale-105"
+                <img
+                  src="/logo.png"
+                  alt="Conference Logo"
+                  className="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                  loading="eager"
+                  style={{
+                    imageRendering: 'crisp-edges',
+                    WebkitFontSmoothing: 'antialiased'
+                  }}
                 />
               </div>
             </Link>
@@ -141,9 +146,9 @@ const Navigation = () => {
                   {item.label}
                 </Link>
               ))}
-              
+
               {/* Conference Dropdown */}
-              <div 
+              <div
                 className="relative"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -152,12 +157,12 @@ const Navigation = () => {
                   className={`flex items-center px-3 py-2 text-sm font-medium transition-colors duration-200 ${getNavLinkClass(conferenceDropdownItems.some(item => isActive(item.path)))}`}
                 >
                   CONFERENCE
-                  <ChevronDown 
-                    size={16} 
-                    className={`ml-1 transition-transform duration-200 ${isConferenceDropdownOpen ? 'rotate-180' : ''}`} 
+                  <ChevronDown
+                    size={16}
+                    className={`ml-1 transition-transform duration-200 ${isConferenceDropdownOpen ? 'rotate-180' : ''}`}
                   />
                 </button>
-                
+
                 {/* Dropdown Menu */}
                 {isConferenceDropdownOpen && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-slate-800 backdrop-blur-xl border border-slate-200/30 dark:border-slate-700/30 rounded-xl shadow-2xl z-50">
@@ -166,11 +171,10 @@ const Navigation = () => {
                         <Link
                           key={item.id}
                           to={item.path}
-                          className={`block w-full text-left px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200 ${
-                            isActive(item.path)
+                          className={`block w-full text-left px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200 ${isActive(item.path)
                               ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30'
                               : 'text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-700/50'
-                          }`}
+                            }`}
                         >
                           {item.label}
                         </Link>
@@ -191,21 +195,19 @@ const Navigation = () => {
               aria-label="Toggle theme"
             >
               <div className="relative w-5 h-5">
-                <Sun 
-                  size={18} 
-                  className={`absolute transition-all duration-300 ${
-                    theme === 'light' ? 'opacity-100 rotate-0' : 'opacity-0 rotate-180'
-                  }`} 
+                <Sun
+                  size={18}
+                  className={`absolute transition-all duration-300 ${theme === 'light' ? 'opacity-100 rotate-0' : 'opacity-0 rotate-180'
+                    }`}
                 />
-                <Moon 
-                  size={18} 
-                  className={`absolute transition-all duration-300 ${
-                    theme === 'dark' ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-180'
-                  }`} 
+                <Moon
+                  size={18}
+                  className={`absolute transition-all duration-300 ${theme === 'dark' ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-180'
+                    }`}
                 />
               </div>
             </button>
-            
+
             {/* Download Brochure Button */}
             <button className={`hidden sm:flex items-center space-x-2 px-4 py-2 font-medium rounded-lg transition-all duration-200 ${getBrochureButtonClass()}`}>
               <Download size={16} />
@@ -216,11 +218,10 @@ const Navigation = () => {
             <div className="lg:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`p-2 rounded-lg transition-all duration-200 ${
-                  isScrolled
+                className={`p-2 rounded-lg transition-all duration-200 ${isScrolled
                     ? 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                     : 'text-white hover:bg-white/20'
-                }`}
+                  }`}
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -237,16 +238,15 @@ const Navigation = () => {
                   key={item.id}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block w-full text-left px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${
-                    isActive(item.path)
+                  className={`block w-full text-left px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${isActive(item.path)
                       ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30'
                       : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800'
-                  }`}
+                    }`}
                 >
                   {item.label}
                 </Link>
               ))}
-              
+
               {/* Conference Section */}
               <div className="px-4 py-2 text-base font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                 Conference
@@ -256,16 +256,15 @@ const Navigation = () => {
                   key={item.id}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block w-full text-left px-6 py-3 text-base font-medium rounded-lg transition-all duration-200 ${
-                    isActive(item.path)
+                  className={`block w-full text-left px-6 py-3 text-base font-medium rounded-lg transition-all duration-200 ${isActive(item.path)
                       ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30'
                       : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800'
-                  }`}
+                    }`}
                 >
                   {item.label}
                 </Link>
               ))}
-              
+
               <button className="flex items-center space-x-2 w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-200 mt-4 font-medium">
                 <Download size={16} />
                 <span>Download Brochure</span>
