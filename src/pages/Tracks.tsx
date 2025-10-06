@@ -186,7 +186,7 @@ const Tracks = () => {
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mt-20 mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {tracks.map((track, index) => {
               const IconComponent = track.icon;

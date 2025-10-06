@@ -171,6 +171,7 @@ const About = () => {
             <button className="btn-secondary">
               View Program
             </button>
+            </div>
           </div>
         </div>
       </div>

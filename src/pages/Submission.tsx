@@ -52,7 +52,7 @@ const Submission = () => {
 
       {/* Instructions Section */}
       <section className="pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ const Submission = () => {
             transition={{ duration: 0.6 }}
             className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg"
           >
-            <div className="flex items-center mb-6">
+            <div className="flex items-center justify-center mb-6">
               <FileText size={32} className="text-blue-600 mr-4" />
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white">INSTRUCTIONS FOR SUBMISSIONS</h2>
             </div>
@@ -68,7 +68,7 @@ const Submission = () => {
               {submissionInstructions.map((instruction, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle size={20} className="text-green-500 flex-shrink-0 mt-1" />
-                  <p className="text-slate-700 dark:text-slate-300">{instruction}</p>
+                  <p className="text-slate-700  dark:text-slate-300">{instruction}</p>
                 </div>
               ))}
             </div>
@@ -172,7 +172,7 @@ const Submission = () => {
               <Award size={48} className="mx-auto mb-4" />
               <h2 className="text-3xl font-bold mb-4">Best Paper Awards</h2>
               <p className="text-yellow-100 text-lg">
-                <strong>One award per session</strong> - To recognise and promote quality contributions to scientific research community
+                
               </p>
             </div>
           </motion.div>

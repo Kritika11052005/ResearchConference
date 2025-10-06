@@ -63,66 +63,6 @@ const Speakers = () => {
         website: '#',
         email: 'james.liu@cmu.edu'
       }
-    },
-    {
-      id: '5',
-      name: 'Dr. Sarah Ahmed',
-      title: 'Principal Researcher',
-      affiliation: 'Microsoft Research',
-      image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      bio: 'Leading expert in distributed systems and edge computing architectures.',
-      specialization: 'Cloud Computing',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        website: '#',
-        email: 'sarah.ahmed@microsoft.com'
-      }
-    },
-    {
-      id: '6',
-      name: 'Prof. David Chang',
-      title: 'Professor of Cybersecurity',
-      affiliation: 'UC Berkeley',
-      image: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      bio: 'Cybersecurity researcher focusing on blockchain and cryptographic protocols.',
-      specialization: 'Cybersecurity',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        website: '#',
-        email: 'david.chang@berkeley.edu'
-      }
-    },
-    {
-      id: '7',
-      name: 'Dr. Emily Watson',
-      title: 'Research Director',
-      affiliation: 'IBM Research',
-      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      bio: 'Expert in augmented reality and mixed reality applications for enterprise.',
-      specialization: 'Augmented Reality',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        website: '#',
-        email: 'emily.watson@ibm.com'
-      }
-    },
-    {
-      id: '8',
-      name: 'Prof. Michael Brown',
-      title: 'Chair of Industrial Automation',
-      affiliation: 'ETH Zurich',
-      image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      bio: 'Leading researcher in Industry 4.0 and smart manufacturing systems.',
-      specialization: 'Industrial Automation',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        website: '#',
-        email: 'michael.brown@ethz.ch'
-      }
     }
   ];
 
