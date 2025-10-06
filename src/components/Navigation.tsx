@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Moon, Sun, Download, ChevronDown } from 'lucide-react';
+import { Menu, X, Moon, Sun, Download, ChevronDown, ExternalLink } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 
 const Navigation = () => {
@@ -110,6 +110,11 @@ const Navigation = () => {
     }, 300); // Delay of 300ms before closing
   };
 
+  const handleNavClick = (path) => {
+    window.location.href = path;
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top on navigation
+  };
+
   return (
     <nav 
       className={`${isScrolled ? 'fixed' : 'absolute'} top-0 w-full z-50 transition-all duration-300 ${navBgClass}`}
@@ -136,6 +141,7 @@ const Navigation = () => {
                 <Link
                   key={item.id}
                   to={item.path}
+                  onClick={() => handleNavClick(item.path)} // Ensure navigation scrolls to top
                   className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${getNavLinkClass(isActive(item.path))}`}
                 >
                   {item.label}
@@ -206,10 +212,17 @@ const Navigation = () => {
               </div>
             </button>
             
-            {/* Download Brochure Button */}
-            <button className={`hidden sm:flex items-center space-x-2 px-4 py-2 font-medium rounded-lg transition-all duration-200 ${getBrochureButtonClass()}`}>
-              <Download size={16} />
-              <span>Brochure</span>
+            {/* Register Button */}
+            <button 
+              onClick={() => {
+                window.location.href = '/registration';
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top on navigation
+              }}
+              className={`hidden sm:flex items-center space-x-2 px-4 py-2 font-medium rounded-lg transition-all duration-200 ${getBrochureButtonClass()}`}
+            >
+              {/* <Download size={16} /> */}
+              <span>Register</span>
+              <ExternalLink size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
             </button>
 
             {/* Mobile menu button */}
@@ -236,7 +249,7 @@ const Navigation = () => {
                 <Link
                   key={item.id}
                   to={item.path}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => handleNavClick(item.path)} // Ensure navigation scrolls to top
                   className={`block w-full text-left px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${
                     isActive(item.path)
                       ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30'
