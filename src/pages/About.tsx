@@ -160,7 +160,8 @@ const About = () => {
           <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
             Be part of this exciting journey to explore the future of technology and innovation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center ">
+            <div  className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link 
               to="/registration"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} // Scroll to top on navigation
@@ -171,6 +172,7 @@ const About = () => {
             <button className="btn-secondary">
               View Program
             </button>
+            </div>
             </div>
           </div>
         </div>
