@@ -8,31 +8,35 @@ const Registration = () => {
       category: "IEEE Members",
       indian: {
         student_authors: "₹8,000",
-        industryProfessional: "₹10,000"
+        industryProfessional: "₹10,000",
+        attendee: "₹3,000",
       },
       foreign: {
         student_authors: "$250",
-        industryProfessional: "$320"
-      }
+        industryProfessional: "$320",
+        attendee: "$100",
+      },
     },
     {
-      category: "Non-IEEE Members", 
+      category: "Non-IEEE Members",
       indian: {
-        academician: "₹9,000",
+        student_authors: "₹9,000",
         industryProfessional: "₹12,000",
+        attendee: "₹3,000",
       },
       foreign: {
-        academician: "$350",
-        industryProfessional: "$100",
-      }
-    }
+        student_authors: "$300",
+        industryProfessional: "$350",
+        attendee: "$100",
+      },
+    },
   ];
 
   const benefits = [
     {
       icon: <CheckCircle className="w-6 h-6" />,
-      title: "IEEE Xplore Publication",
-      description: "Registration Fee includes Publication in IEEE Xplore"
+      title: "IEEE Proceedings",
+      description: "Registration Fee includes Proceedings in IEEE Delhi Section"
     },
     {
       icon: <Award className="w-6 h-6" />,
@@ -69,10 +73,10 @@ const Registration = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-indigo-900/20">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
+      <section className="pt-24 pb-12 relative overflow-hidden"> {/* Reduced padding */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl transform translate-x-32 -translate-y-32"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-400/20 rounded-full blur-3xl transform -translate-x-32 translate-y-32"></div>
+          <div className="absolute top-0 right-0 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl transform translate-x-24 -translate-y-24"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-indigo-400/20 rounded-full blur-3xl transform -translate-x-24 translate-y-24"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -82,60 +86,73 @@ const Registration = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">
-              Conference
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"> Registration</span>
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+              Conference Registration
             </h1>
-            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
-              Register now to secure your spot at ICMAIN 2027 and join the global community of researchers and innovators
+            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+              Register now to secure your spot at ICMAIN 2027 and join the global community of researchers and innovators.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Registration Table */}
-      <section className="py-16">
+      <section className="py-12"> {/* Reduced padding */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-16"
+            className="mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white text-center mb-8">
               Registration Fees
             </h2>
 
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
                     <tr>
-                      <th className="px-6 py-4 text-left font-semibold">Membership Status</th>
-                      <th className="px-6 py-4 text-center font-semibold" colSpan={3}>Indian Authors</th>
-                      <th className="px-6 py-4 text-center font-semibold" colSpan={3}>Foreign Authors</th>
-                    </tr>
-                    <tr className="bg-blue-500">
-                      <th className="px-6 py-3"></th>
-                      <th className="px-4 py-3 text-center text-sm">Student Authors</th>
-                      <th className="px-4 py-3 text-center text-sm">Industry/Academic Authors</th>
-                      {/* <th className="px-4 py-3 text-center text-sm">Research Scholar</th> */}
-                      <th className="px-4 py-3 text-center text-sm">Student Authors</th>
-                      <th className="px-4 py-3 text-center text-sm">Industry/Academic Authors</th>
-                      {/* <th className="px-4 py-3 text-center text-sm">Research Scholar</th> */}
+                      <th className="px-6 py-3 text-left font-semibold">Membership Status</th>
+                      <th className="px-4 py-3 text-center font-semibold">Student Authors</th>
+                      <th className="px-4 py-3 text-center font-semibold">Industry/Academic Authors</th>
+                      <th className="px-4 py-3 text-center font-semibold">Attendee</th>
+                      <th className="px-4 py-3 text-center font-semibold">Student Authors (Foreign)</th>
+                      <th className="px-4 py-3 text-center font-semibold">Industry/Academic Authors (Foreign)</th>
+                      <th className="px-4 py-3 text-center font-semibold">Attendee (Foreign)</th>
                     </tr>
                   </thead>
                   <tbody>
                     {registrationData.map((row, index) => (
-                      <tr key={index} className={`border-b border-gray-200 dark:border-gray-700 ${index % 2 === 0 ? 'bg-gray-50 dark:bg-gray-700/50' : 'bg-white dark:bg-gray-800'}`}>
-                        <td className="px-6 py-4 font-semibold text-slate-900 dark:text-white">{row.category}</td>
-                        <td className="px-4 py-4 text-center text-slate-700 dark:text-slate-300 font-medium">{row.indian.student_authors}</td>
-                        <td className="px-4 py-4 text-center text-slate-700 dark:text-slate-300 font-medium">{row.indian.industryProfessional}</td>
-                        {/* <td className="px-4 py-4 text-center text-slate-700 dark:text-slate-300 font-medium">{row.indian.researchScholar}</td> */}
-                        <td className="px-4 py-4 text-center text-slate-700 dark:text-slate-300 font-medium">{row.foreign.student_authors}</td>
-                        <td className="px-4 py-4 text-center text-slate-700 dark:text-slate-300 font-medium">{row.foreign.industryProfessional}</td>
-                        {/* <td className="px-4 py-4 text-center text-slate-700 dark:text-slate-300 font-medium">{row.foreign.researchScholar}</td> */}
+                      <tr
+                        key={index}
+                        className={`border-b border-gray-200 dark:border-gray-700 ${
+                          index % 2 === 0 ? "bg-gray-50 dark:bg-gray-700/50" : "bg-white dark:bg-gray-800"
+                        }`}
+                      >
+                        <td className="px-6 py-4 font-semibold text-slate-900 dark:text-white">
+                          {row.category}
+                        </td>
+                        <td className="px-4 py-4 text-center text-slate-700 dark:text-slate-300 font-medium">
+                          {row.indian.student_authors}
+                        </td>
+                        <td className="px-4 py-4 text-center text-slate-700 dark:text-slate-300 font-medium">
+                          {row.indian.industryProfessional}
+                        </td>
+                        <td className="px-4 py-4 text-center text-slate-700 dark:text-slate-300 font-medium">
+                          {row.indian.attendee}
+                        </td>
+                        <td className="px-4 py-4 text-center text-slate-700 dark:text-slate-300 font-medium">
+                          {row.foreign.student_authors}
+                        </td>
+                        <td className="px-4 py-4 text-center text-slate-700 dark:text-slate-300 font-medium">
+                          {row.foreign.industryProfessional}
+                        </td>
+                        <td className="px-4 py-4 text-center text-slate-700 dark:text-slate-300 font-medium">
+                          {row.foreign.attendee}
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -234,6 +251,7 @@ const Registration = () => {
             </p>
             <Link
               to="/to-be-updated"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} // Scroll to top on navigation
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
             >
               Register Now

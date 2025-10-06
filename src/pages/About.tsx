@@ -160,7 +160,13 @@ const About = () => {
             Be part of this exciting journey to explore the future of technology and innovation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="btn-primary">
+            <button 
+              onClick={() => {
+                window.location.href = '/registration';
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top on navigation
+              }}
+              className="btn-primary"
+            >
               Register Now
             </button>
             <button className="btn-secondary">
