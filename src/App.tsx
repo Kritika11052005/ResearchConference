@@ -15,6 +15,8 @@ import Logistics from './pages/Logistics';
 import Contact from './pages/Contact';
 import Sponsorship from './pages/Sponsorship';
 import SessionChair from './pages/SessionChair';
+import Registration from './pages/Registration';
+import ToBeUpdated from './pages/ToBeUpdated';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
               <Route path="/committee" element={<Committee />} />
               <Route path="/sponsorship" element={<Sponsorship />} />
               <Route path="/session-chair" element={<SessionChair />} />
+              <Route path="/registration" element={<Registration />} />
+              <Route path="/to-be-updated" element={<ToBeUpdated />} />
               <Route path="/speakers" element={<Speakers />} />
               <Route path="/tracks" element={<Tracks />} />
               <Route path="/submission" element={<Submission />} />

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Calendar, MapPin, Users, ExternalLink, Award, Clock, Globe, Star, Download } from 'lucide-react';
 import { CountdownTimer } from '../components/CountdownTimer';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import SponsorImage from '/Sponsor.jpg';
 
 const Home = () => {
@@ -87,10 +88,13 @@ const Home = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-              <button className="group flex items-center space-x-2 px-5 py-2.5 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-gray-900 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-sm">
+              <Link 
+                to="/registration"
+                className="group flex items-center space-x-2 px-5 py-2.5 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-gray-900 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-sm"
+              >
                 <span>Register Now</span>
                 <ExternalLink size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -455,10 +459,13 @@ const Home = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="group flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-gray-900 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
+              <Link 
+                to="/registration"
+                className="group flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-gray-900 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
+              >
                 <span>Register Now</span>
                 <ExternalLink size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-              </button>
+              </Link>
               <button className="group flex items-center space-x-2 px-8 py-4 bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
                 <span>Download Brochure</span>
                 <Download size={18} className="group-hover:rotate-12 transition-transform duration-300" />
