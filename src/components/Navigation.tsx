@@ -110,11 +110,6 @@ const Navigation = () => {
     }, 300); // Delay of 300ms before closing
   };
 
-  const handleNavClick = (path) => {
-    window.location.href = path;
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top on navigation
-  };
-
   return (
     <nav 
       className={`${isScrolled ? 'fixed' : 'absolute'} top-0 w-full z-50 transition-all duration-300 ${navBgClass}`}
@@ -141,7 +136,6 @@ const Navigation = () => {
                 <Link
                   key={item.id}
                   to={item.path}
-                  onClick={() => handleNavClick(item.path)} // Ensure navigation scrolls to top
                   className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${getNavLinkClass(isActive(item.path))}`}
                 >
                   {item.label}
@@ -249,7 +243,7 @@ const Navigation = () => {
                 <Link
                   key={item.id}
                   to={item.path}
-                  onClick={() => handleNavClick(item.path)} // Ensure navigation scrolls to top
+                  onClick={() => setIsOpen(false)}
                   className={`block w-full text-left px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${
                     isActive(item.path)
                       ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30'
