@@ -162,6 +162,49 @@ const Home = () => {
             </div>
           </motion.div>
 
+          {/* Conference Poster Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mt-16 text-center"
+          >
+            {/* <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-8">
+              Official Conference
+              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"> Poster</span>
+            </h3> */}
+            <div className="relative max-w-4xl mx-auto group">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-indigo-500/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-300"></div>
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl border border-white/20 dark:border-gray-700/50 backdrop-blur-sm bg-white/10 dark:bg-gray-800/20 p-4 group-hover:scale-[1.02] transition-all duration-500">
+                <img
+                  src="/Front_Poster.jpg"
+                  alt="ICMAIN 2027 Conference Poster"
+                  className="w-full h-auto object-contain rounded-xl shadow-lg"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent rounded-xl"></div>
+              </div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="mt-6 flex justify-center"
+              >
+                {/* <a
+                  href="/Front_Poster.jpg"
+                  download="ICMAIN_2027_Poster.jpg"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 group"
+                >
+                  <Download size={20} className="mr-2 group-hover:animate-pulse" />
+                  Download Poster
+                </a> */}
+              </motion.div>
+            </div>
+          </motion.div>
+
+          <div className="h-16"></div> {/* Spacer for even spacing */}
+
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -208,6 +251,8 @@ const Home = () => {
             <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-6">Conference Countdown</h3>
             <CountdownTimer targetDate="2026-02-24T00:00:00" />
           </motion.div>
+
+          
         </div>
       </section>
 
