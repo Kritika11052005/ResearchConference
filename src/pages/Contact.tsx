@@ -36,39 +36,6 @@ const Contact = () => {
       specialization: 'Technical Chair',
       email: 'amit.patel@icmain2027.edu',
       linkedin: 'https://linkedin.com/in/amitpatel'
-    },
-    {
-      id: '4',
-      name: 'Dr. Sneha Gupta',
-      title: 'Organizing Chair',
-      affiliation: 'Manipal University Jaipur',
-      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      bio: 'Experienced in event management and academic coordination with focus on research excellence.',
-      specialization: 'Organizing Chair',
-      email: 'sneha.gupta@icmain2027.edu',
-      linkedin: 'https://linkedin.com/in/snehagupta'
-    },
-    {
-      id: '5',
-      name: 'Prof. Vikram Singh',
-      title: 'Publication Chair',
-      affiliation: 'Manipal University Jaipur',
-      image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      bio: 'Distinguished academic with expertise in research publications and scholarly communications.',
-      specialization: 'Publication Chair',
-      email: 'vikram.singh@icmain2027.edu',
-      linkedin: 'https://linkedin.com/in/vikramsingh'
-    },
-    {
-      id: '6',
-      name: 'Dr. Meera Joshi',
-      title: 'Registration Chair',
-      affiliation: 'Manipal University Jaipur',
-      image: 'https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      bio: 'Specialist in conference registration systems and participant management with international experience.',
-      specialization: 'Registration Chair',
-      email: 'meera.joshi@icmain2027.edu',
-      linkedin: 'https://linkedin.com/in/meerajoshi'
     }
   ];
 
