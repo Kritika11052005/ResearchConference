@@ -24,7 +24,7 @@ const Navigation = () => {
     { id: 'about', label: 'About Us', path: '/about' },
     { id: 'committee', label: 'Committee', path: '/committee' },
     { id: 'sponsorship', label: 'Sponsorship', path: '/sponsorship' },
-    { id: 'session-chair', label: 'Session Chair', path: '/session-chair' },
+    { id: 'session-chair', label: 'Honorary Chair', path: '/session-chair' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
