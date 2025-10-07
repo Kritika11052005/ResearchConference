@@ -1,7 +1,74 @@
 import { Star, Users, Trophy, Target, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+
+const sponsors = [
+  { name: "Deakin University, Australia", logo: "/deakin.png" },
+  { name: "University of Applied Sciences, Austria", logo: "/austria.png" },
+  { name: "University of Malta, Malta, Europe", logo: "/malta.png" },
+  { name: "University of Warwick, United Kingdom", logo: "/warwick.png" },
+  { name: "IEEE Delhi", logo: "/ieeedelhi.png" },
+  { name: "IEEE Bangalore", logo: "/ieeebg.png" },
+];
+
 const Sponsorship = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-indigo-900/20">
+
+      {/* --- Hero Section --- */}
+      <section className="pt-32 pb-16 text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6"
+        >
+          Our Esteemed Sponsors
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto"
+        >
+          We are proud to be supported by leading universities and organizations worldwide
+        </motion.p>
+      </section>
+
+      {/* --- Sponsors Grid --- */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+            {sponsors.map((sponsor, index) => (
+              <motion.div
+                key={sponsor.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex flex-col items-center space-y-4"
+              >
+                <img 
+                  src={sponsor.logo}  // Direct reference from public folder
+                  alt={sponsor.name} 
+                  className="h-16 sm:h-20 object-contain"
+                />
+                <span className="text-center text-sm sm:text-base text-slate-700 dark:text-slate-300">
+                  {sponsor.name}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+    </div>
+  );
+};
+
+export default Sponsorship;
+
+/*const Sponsorship = () => {
   const sponsorshipTiers = [
     {
       tier: "Platinum",
@@ -61,7 +128,8 @@ const Sponsorship = () => {
       popular: false
     }
   ];
-
+*/
+/*
   const sponsorshipOpportunities = [
     {
       title: "Keynote Sponsorship",
@@ -94,10 +162,12 @@ const Sponsorship = () => {
       description: "Brand the conference Wi-Fi network name for maximum visibility."
     }
   ];
-
-  return (
+*/
+/*
+ { /*return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-indigo-900/20">
-      {/* Hero Section */}
+      {/* Hero Section */
+      /*
       <section className="pt-32 pb-16 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl transform translate-x-32 -translate-y-32"></div>
@@ -135,8 +205,9 @@ const Sponsorship = () => {
           </motion.div>
         </div>
       </section>
-
+*/
       {/* Sponsorship Tiers */}
+      /*
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -211,8 +282,9 @@ const Sponsorship = () => {
           </div>
         </div>
       </section>
-
+*/
       {/* Additional Opportunities */}
+      /*
       <section className="py-20 bg-white dark:bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -254,8 +326,9 @@ const Sponsorship = () => {
           </div>
         </div>
       </section>
-
+*/
       {/* Contact Section */}
+      /*
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -294,7 +367,8 @@ const Sponsorship = () => {
         </div>
       </section>
     </div>
-  );
-};
+  
 
-export default Sponsorship;
+
+export default Sponsorship;*/
+
