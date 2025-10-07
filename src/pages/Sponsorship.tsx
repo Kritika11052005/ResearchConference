@@ -122,7 +122,7 @@ const Sponsorship = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
+      {/* <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -158,7 +158,7 @@ const Sponsorship = () => {
             </button>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

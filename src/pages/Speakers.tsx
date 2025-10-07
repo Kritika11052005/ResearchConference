@@ -19,7 +19,7 @@ const Speakers = () => {
     },
     {
       id: '2',
-      name: 'Prof. Robert Singh',
+      name: 'Dr. Mark Leeson Wala',
       title: 'Director of Quantum Computing Lab',
       affiliation: 'Stanford University',
       image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
