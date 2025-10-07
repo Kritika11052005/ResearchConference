@@ -90,7 +90,7 @@ const Contact = () => {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6">
-              Organizing <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Committee</span>
+              Contact <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Committee</span>
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
               Meet the dedicated team behind ICMAIN 2027, working tirelessly to bring you an exceptional conference experience

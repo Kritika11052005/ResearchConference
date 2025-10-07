@@ -44,46 +44,48 @@ const Publication = () => {
         </div>
 
         {/* Publication Options */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {publications.map((pub, index) => (
-            <div
-              key={index}
-              className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className={`h-2 bg-gradient-to-r ${pub.color}`}></div>
-              <div className="p-8">
-                <div className="flex items-start justify-between mb-4">
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                    {pub.title}
-                  </h2>
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r ${pub.color}`}>
-                    {pub.impact}
-                  </span>
-                </div>
-                
-                <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  {pub.description}
-                </p>
+        <div className="flex justify-center mb-16">
+  <div className="w-full max-w-2xl">
+    {publications.map((pub, index) => (
+      <div
+        key={index}
+        className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+      >
+        <div className={`h-2 bg-gradient-to-r ${pub.color}`}></div>
+        <div className="p-8">
+          <div className="flex items-start justify-between mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+              {pub.title}
+            </h2>
+            <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r ${pub.color}`}>
+              {pub.impact}
+            </span>
+          </div>
 
-                <div className="space-y-3">
-                  {pub.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                      <span className="text-gray-700 dark:text-gray-300 text-sm">
-                        {feature}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
+            {pub.description}
+          </p>
 
-                <button className="mt-6 flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
-                  <span>Learn More</span>
-                  <ExternalLink size={16} />
-                </button>
+          <div className="space-y-3">
+            {pub.features.map((feature, featureIndex) => (
+              <div key={featureIndex} className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                <span className="text-gray-700 dark:text-gray-300 text-sm">
+                  {feature}
+                </span>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <button className="mt-6 flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
+            <span>Learn More</span>
+            <ExternalLink size={16} />
+          </button>
         </div>
+      </div>
+    ))}
+  </div>
+</div>
 
         {/* Benefits */}
         <div className="mb-16">
