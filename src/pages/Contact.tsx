@@ -6,36 +6,33 @@ const Contact = () => {
   const organizers = [
     {
       id: '1',
-      name: 'Dr. Rajesh Kumar',
-      title: 'General Chair',
-      affiliation: 'Manipal University Jaipur',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      bio: 'Leading expert in artificial intelligence and machine learning with over 20 years of academic experience.',
-      specialization: 'General Chair',
-      email: 'rajesh.kumar@icmain2027.edu',
-      linkedin: 'https://linkedin.com/in/rajeshkumar'
+      name: 'Dr. Gireesh Kumar',
+      title: 'Assistant Professor (Selection Grade)',
+      affiliation: 'Department of Computer Science & Engineering, Manipal University Jaipur',
+      image: 'https://jaipur.manipal.edu/admin/photo/3/faculty/12/181.jpg',
+      specialization: 'Computer Science Software Engineering',
+      email: 'gireesh.kumar@jaipur.manipal.ed',
+      linkedin: 'https://www.linkedin.com/in/dr-gireesh-kumar-kaushik-07746322/'
     },
     {
       id: '2',
-      name: 'Prof. Priya Sharma',
-      title: 'Program Chair',
-      affiliation: 'Manipal University Jaipur',
-      image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      bio: 'Renowned researcher in computer science and innovation with extensive conference organizing experience.',
-      specialization: 'Program Chair',
-      email: 'priya.sharma@icmain2027.edu',
-      linkedin: 'https://linkedin.com/in/priyasharma'
+      name: 'Dr. Usha Jain',
+      title: 'Assistant Professor',
+      affiliation: 'Department of Computer Science & Engineering, Manipal University Jaipur',
+      image: 'https://jaipur.manipal.edu/admin/photo/3/faculty/12/215.jpg',
+      specialization: 'Computer Science Information Systems',
+      email: 'usha.jain@jaipur.manipal.edu',
+      linkedin: 'https://www.linkedin.com/in/usha-jain-64a339159/'
     },
     {
       id: '3',
-      name: 'Dr. Amit Patel',
-      title: 'Technical Chair',
-      affiliation: 'Manipal University Jaipur',
-      image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      bio: 'Expert in technical systems and conference infrastructure with focus on emerging technologies.',
-      specialization: 'Technical Chair',
-      email: 'amit.patel@icmain2027.edu',
-      linkedin: 'https://linkedin.com/in/amitpatel'
+      name: 'Dr. Mahesh Jangid',
+      title: 'Associate Professor & Deputy HoD',
+      affiliation: 'Department of Computer Science & Engineering, Manipal University Jaipur',
+      image: 'https://jaipur.manipal.edu/admin/photo/3/faculty/12/160.jpg',
+      specialization: 'Computer Vision & Deep learning',
+      email: ' mahesh.jangid@jaipur.manipal.edu',
+      linkedin: 'https://www.linkedin.com/in/mahesh-jangid/'
     }
   ];
 
@@ -110,14 +107,12 @@ const Contact = () => {
                 </div>
 
                 {/* Bio */}
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4 text-center">
-                  {organizer.bio}
-                </p>
+                
 
                 {/* Social Links */}
                 <div className="flex justify-center space-x-3">
                   <a
-                    href={`mailto:${organizer.email}`}
+                    href={`https://mail.google.com/mail/?view=cm&fs=1&to=${organizer.email}`}
                     className="w-8 h-8 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-300 group-hover:scale-110"
                   >
                     <Mail size={16} />
