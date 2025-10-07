@@ -113,7 +113,7 @@ const Sponsorship = () => {
             className="flex justify-center relative z-10"
           >
             <img 
-              src="/sdggoals.png" 
+              src="/sdg.png" 
               alt="Sustainable Development Goals" 
               className="w-full max-w-4xl object-contain rounded-lg"
             />
