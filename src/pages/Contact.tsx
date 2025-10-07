@@ -7,10 +7,10 @@ const Contact = () => {
     {
       id: '1',
       name: 'Dr. Gireesh Kumar',
-      title: 'Assistant Professor (Selection Grade)',
+      title: 'Associate Professor',
       affiliation: 'Department of Computer Science & Engineering, Manipal University Jaipur',
-      image: 'https://jaipur.manipal.edu/admin/photo/3/faculty/12/181.jpg',
-      specialization: 'Computer Science Software Engineering',
+      image: '/Gireesh_Sir.jpg',
+      specialization: 'AI/ML,Software Engineering & RPA',
       email: 'gireesh.kumar@jaipur.manipal.ed',
       linkedin: 'https://www.linkedin.com/in/dr-gireesh-kumar-kaushik-07746322/'
     },
@@ -20,14 +20,14 @@ const Contact = () => {
       title: 'Assistant Professor',
       affiliation: 'Department of Computer Science & Engineering, Manipal University Jaipur',
       image: 'https://jaipur.manipal.edu/admin/photo/3/faculty/12/215.jpg',
-      specialization: 'Computer Science Information Systems',
+      specialization: 'Computer Science & Network Security',
       email: 'usha.jain@jaipur.manipal.edu',
       linkedin: 'https://www.linkedin.com/in/usha-jain-64a339159/'
     },
     {
       id: '3',
       name: 'Dr. Mahesh Jangid',
-      title: 'Associate Professor & Deputy HoD',
+      title: 'Associate Professor',
       affiliation: 'Department of Computer Science & Engineering, Manipal University Jaipur',
       image: 'https://jaipur.manipal.edu/admin/photo/3/faculty/12/160.jpg',
       specialization: 'Computer Vision & Deep learning',

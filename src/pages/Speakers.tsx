@@ -5,34 +5,6 @@ import { Link } from 'react-router-dom';
 const Speakers = () => {
   const speakers = [
     {
-      id: '1',
-      name: 'Mr. Manish Kumar Keshri',
-      title: 'Senior Machine Learning Engineer ',
-      affiliation: 'Meta',
-      image: 'https://media.licdn.com/dms/image/v2/D5603AQG61zKS_nEdVw/profile-displayphoto-shrink_400_400/B56ZX.sDj_GsAg-/0/1743734719028?e=1762992000&v=beta&t=lDP3Ozp7EOeHA9N84AMomMeyCcpztyv2F7JDgZnC45c',
-      bio: 'Specialized in developing intelligent systems for content understanding, recommendations, and ad optimization at Meta.',
-      specialization: 'Machine Learning',
-      social: {
-        linkedin: 'https://www.linkedin.com/in/manish-kumar-keshri-b094158b/',
-        website: 'https://topmate.io/manish_kumar_keshri'
-      }
-    },
-    {
-      id: '2',
-      name: 'Dr. Mark Leeson Wala',
-      title: 'Director of Quantum Computing Lab',
-      affiliation: 'Stanford University',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      bio: 'Pioneer in quantum algorithms and quantum machine learning applications.',
-      specialization: 'Quantum Computing',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        website: '#',
-        email: 'robert.singh@stanford.edu'
-      }
-    },
-    {
       id: '3',
       name: 'Dr. Lalit Garg',
       title: 'Prof. Computer Information Systems, Faculty of Information and Communication Technology ',
@@ -50,7 +22,7 @@ const Speakers = () => {
       id: '4',
       name: 'Dr. Anchit Bijalwan',
       title: 'Associate Professor SFHEA',
-      affiliation: 'British University Vietnam',
+      affiliation: 'British University Vietnam',
       image: 'https://media.licdn.com/dms/image/v2/C4E03AQHnRtSCg2Eqbw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1542453869762?e=1762992000&v=beta&t=qvpXvQ41saRV8HMQsJV5ZnX2c8M9_7Gr1nRehoVqpnI',
       bio: 'IEEE Senior Member | Lead, Computing, Games & Data Science Research | Stream Lead, FinTech & Data Analytics',
       specialization: 'FinTech &Data Analytics',
@@ -58,6 +30,34 @@ const Speakers = () => {
         linkedin: 'https://www.linkedin.com/in/anchit-bijalwan-834521125/',
         website: '#',
         
+      }
+    },
+    {
+      id: '2',
+      name: 'Dr. Mark Leeson',
+      title: 'Director of Quantum Computing Lab',
+      affiliation: 'University of Warwick,UK',
+      image: 'https://as2.ftcdn.net/v2/jpg/01/99/45/45/1000_F_199454533_GIBKQvbUBlu0hl5xhn64pJOHp1nn5W2C.jpg',
+      bio: 'Pioneer in quantum algorithms and quantum machine learning applications.',
+      specialization: 'Quantum Computing',
+      social: {
+        linkedin: '#',
+        twitter: '#',
+        website: '#',
+        email: 'robert.singh@stanford.edu'
+      }
+    },
+    {
+      id: '1',
+      name: 'Mr. Manish Kumar Keshri',
+      title: 'Senior Machine Learning Engineer ',
+      affiliation: 'Meta',
+      image: 'https://media.licdn.com/dms/image/v2/D5603AQG61zKS_nEdVw/profile-displayphoto-shrink_400_400/B56ZX.sDj_GsAg-/0/1743734719028?e=1762992000&v=beta&t=lDP3Ozp7EOeHA9N84AMomMeyCcpztyv2F7JDgZnC45c',
+      bio: 'Specialized in developing intelligent systems for content understanding, recommendations, and ad optimization at Meta.',
+      specialization: 'Machine Learning',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/manish-kumar-keshri-b094158b/',
+        website: 'https://topmate.io/manish_kumar_keshri'
       }
     }
   ];
@@ -79,12 +79,19 @@ const Speakers = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6">
-              Featured <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Speakers</span>
-            </h1>
-            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Meet the distinguished researchers, industry leaders, and visionaries who will be sharing their expertise at ICMAIN 2027
-            </p>
+            <div className="mb-6">
+  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white">
+    Featured <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Speakers</span>
+  </h1>
+  <div className="mt-3 flex justify-center">
+    <span className="inline-flex items-center px-4 py-1.5 text-sm font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-md">
+      Tentative
+    </span>
+  </div>
+</div>
+<p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+  Meet the distinguished researchers, industry leaders, and visionaries who will be sharing their expertise at ICMAIN 2027
+</p>
           </motion.div>
         </div>
       </section>

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const sponsors = [
   { name: "Deakin University, Australia", logo: "/deakin.png" },
-  { name: "University of Applied Sciences, Austria", logo: "/austria.png" },
+  { name: "University of Applied Sciences, Austria", logo: "/austria-new.png" },
   { name: "University of Malta, Malta, Europe", logo: "/malta.png" },
   { name: "University of Warwick, United Kingdom", logo: "/warwick.png" },
   { name: "IEEE Delhi", logo: "/ieeedelhi.png" },
