@@ -120,7 +120,7 @@ const SessionChair = () => {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
-              Session <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Chairs</span>
+              Honorary <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Chairs</span>
             </h1>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
               Meet the distinguished leaders and organizers of ICMAIN 2027, bringing together expertise from around the world.
