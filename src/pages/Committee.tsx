@@ -237,10 +237,10 @@ const Committee = () => {
             {committees.map((committee, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
                 className={`relative ${committee.bgPattern} rounded-3xl p-8 backdrop-blur-sm border border-white/20 dark:border-gray-700/50 shadow-xl`}
               >
                 {/* Decorative Elements */}
@@ -264,7 +264,7 @@ const Committee = () => {
 
                 {/* Members Grid */}
                 <div className="relative z-10">
-                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 justify-items-stretch">
                     {committee.members.map((member, memberIndex) => (
                       <motion.div
                         key={memberIndex}
@@ -272,7 +272,7 @@ const Committee = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: memberIndex * 0.1 }}
-                        className="w-full max-w-sm bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50 dark:border-gray-700/50 group flex flex-col justify-between"
+                        className="w-full max-w-sm bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50 dark:border-gray-700/50 group flex flex-col justify-between mx-auto"
                       >
                         <div className="text-center">
                           <div className={`w-16 h-16 bg-gradient-to-r ${committee.color} rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
