@@ -181,7 +181,7 @@ const Contact = () => {
               </p>
               <div className="flex justify-center space-x-6">
                 <a
-                  href="mailto:info@icmain2027.edu"
+                 href="https://mail.google.com/mail/?view=cm&fs=1&to=researchconferencemuj@gmail.com"
                   className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300"
                 >
                   <Mail size={24} className="text-white" />

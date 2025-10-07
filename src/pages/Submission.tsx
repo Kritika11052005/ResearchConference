@@ -64,14 +64,16 @@ const Submission = () => {
               <FileText size={32} className="text-blue-600 mr-4" />
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white">INSTRUCTIONS FOR SUBMISSIONS</h2>
             </div>
-            <div className="space-y-4">
-              {submissionInstructions.map((instruction, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle size={20} className="text-green-500 flex-shrink-0 mt-1" />
-                  <p className="text-slate-700  dark:text-slate-300">{instruction}</p>
-                </div>
-              ))}
-            </div>
+            <div className="flex justify-center">
+  <div className="space-y-4">
+    {submissionInstructions.map((instruction, index) => (
+      <div key={index} className="flex items-center space-x-3">
+        <CheckCircle size={20} className="text-green-500 flex-shrink-0" />
+        <p className="text-slate-700 dark:text-slate-300">{instruction}</p>
+      </div>
+    ))}
+  </div>
+</div>
           </motion.div>
         </div>
       </section>
