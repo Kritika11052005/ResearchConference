@@ -5,26 +5,39 @@ import { Link } from 'react-router-dom';
 const Speakers = () => {
   const speakers = [
     {
-      id: '1',
-      name: 'Dr. Alexandra Kim',
-      title: 'Professor of Computer Science',
-      affiliation: 'MIT - Artificial Intelligence Lab',
-      image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      bio: 'Leading researcher in machine learning and AI applications in healthcare with over 15 years of experience.',
-      specialization: 'Machine Learning',
+      id: '3',
+      name: 'Dr. Lalit Garg',
+      title: 'Prof. Computer Information Systems, Faculty of Information and Communication Technology ',
+      affiliation: 'University of Malta',
+      image: 'https://media.licdn.com/dms/image/v2/D4D03AQEq6-9gR2QpmA/profile-displayphoto-shrink_400_400/B4DZT7_yyvHkAk-/0/1739394592386?e=1762992000&v=beta&t=UxCm6_mVigWIV9io4h9ap5tKoMBPon2HoNlNdd96s-Y',
+      bio: 'Professor of Computer Information Systems at the University of Malta, with research and honorary roles at the University of Liverpool, NTU Singapore, and Ulster University.',
+      specialization: 'Computing and Information Engineering',
       social: {
-        linkedin: '#',
-        twitter: '#',
+        linkedin: 'https://www.linkedin.com/in/drlalitgarg/',
+        website: 'http://lalitgarg.info/',
+        
+      }
+    },
+    {
+      id: '4',
+      name: 'Dr. Anchit Bijalwan',
+      title: 'Associate Professor SFHEA',
+      affiliation: 'British University Vietnam',
+      image: 'https://media.licdn.com/dms/image/v2/C4E03AQHnRtSCg2Eqbw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1542453869762?e=1762992000&v=beta&t=qvpXvQ41saRV8HMQsJV5ZnX2c8M9_7Gr1nRehoVqpnI',
+      bio: 'IEEE Senior Member | Lead, Computing, Games & Data Science Research | Stream Lead, FinTech & Data Analytics',
+      specialization: 'FinTech &Data Analytics',
+      social: {
+        linkedin: 'https://www.linkedin.com/in/anchit-bijalwan-834521125/',
         website: '#',
-        email: 'alexandra.kim@mit.edu'
+        
       }
     },
     {
       id: '2',
-      name: 'Prof. Robert Singh',
+      name: 'Dr. Mark Leeson',
       title: 'Director of Quantum Computing Lab',
-      affiliation: 'Stanford University',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+      affiliation: 'University of Warwick,UK',
+      image: 'https://as2.ftcdn.net/v2/jpg/01/99/45/45/1000_F_199454533_GIBKQvbUBlu0hl5xhn64pJOHp1nn5W2C.jpg',
       bio: 'Pioneer in quantum algorithms and quantum machine learning applications.',
       specialization: 'Quantum Computing',
       social: {
@@ -35,33 +48,16 @@ const Speakers = () => {
       }
     },
     {
-      id: '3',
-      name: 'Dr. Maria Gonzalez',
-      title: 'Senior Research Scientist',
-      affiliation: 'Google DeepMind',
-      image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      bio: 'Expert in AI ethics, responsible AI development, and algorithmic fairness.',
-      specialization: 'AI Ethics',
+      id: '1',
+      name: 'Mr. Manish Kumar Keshri',
+      title: 'Senior Machine Learning Engineer ',
+      affiliation: 'Meta',
+      image: 'https://media.licdn.com/dms/image/v2/D5603AQG61zKS_nEdVw/profile-displayphoto-shrink_400_400/B56ZX.sDj_GsAg-/0/1743734719028?e=1762992000&v=beta&t=lDP3Ozp7EOeHA9N84AMomMeyCcpztyv2F7JDgZnC45c',
+      bio: 'Specialized in developing intelligent systems for content understanding, recommendations, and ad optimization at Meta.',
+      specialization: 'Machine Learning',
       social: {
-        linkedin: '#',
-        twitter: '#',
-        website: '#',
-        email: 'maria.gonzalez@deepmind.com'
-      }
-    },
-    {
-      id: '4',
-      name: 'Prof. James Liu',
-      title: 'Head of Robotics Institute',
-      affiliation: 'Carnegie Mellon University',
-      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      bio: 'Renowned for work in autonomous systems and human-robot interaction.',
-      specialization: 'Robotics',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        website: '#',
-        email: 'james.liu@cmu.edu'
+        linkedin: 'https://www.linkedin.com/in/manish-kumar-keshri-b094158b/',
+        website: 'https://topmate.io/manish_kumar_keshri'
       }
     }
   ];
@@ -83,12 +79,19 @@ const Speakers = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6">
-              Featured <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Speakers</span>
-            </h1>
-            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Meet the distinguished researchers, industry leaders, and visionaries who will be sharing their expertise at ICMAIN 2027
-            </p>
+            <div className="mb-6">
+  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white">
+    Featured <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Speakers</span>
+  </h1>
+  <div className="mt-3 flex justify-center">
+    <span className="inline-flex items-center px-4 py-1.5 text-sm font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-md">
+      Tentative
+    </span>
+  </div>
+</div>
+<p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+  Meet the distinguished researchers, industry leaders, and visionaries who will be sharing their expertise at ICMAIN 2027
+</p>
           </motion.div>
         </div>
       </section>
@@ -150,22 +153,10 @@ const Speakers = () => {
                     <Linkedin size={16} />
                   </a>
                   <a
-                    href={speaker.social.twitter}
-                    className="w-8 h-8 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center hover:bg-blue-400 hover:text-white transition-all duration-300 group-hover:scale-110"
-                  >
-                    <Twitter size={16} />
-                  </a>
-                  <a
                     href={speaker.social.website}
                     className="w-8 h-8 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-white transition-all duration-300 group-hover:scale-110"
                   >
                     <Globe size={16} />
-                  </a>
-                  <a
-                    href={`mailto:${speaker.social.email}`}
-                    className="w-8 h-8 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all duration-300 group-hover:scale-110"
-                  >
-                    <Mail size={16} />
                   </a>
                 </div>
               </motion.div>
