@@ -34,7 +34,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Calendar size={16} className="text-blue-400" />
-                <span className="text-gray-300 text-sm">February 24-26, 2026</span>
+                <span className="text-gray-300 text-sm">February 25-26, 2027</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin size={16} className="text-blue-400 mt-1" />

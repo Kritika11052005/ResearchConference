@@ -101,7 +101,7 @@ const About = () => {
                 Event Details
               </h3>
               <div className="space-y-3 text-slate-600 dark:text-slate-400">
-                <p><strong>Date:</strong> February 24-26, 2026</p>
+                <p><strong>Date:</strong> February 25-26, 2027</p>
                 <p><strong>Venue:</strong> MUJ Campus, Jaipur, Rajasthan, India</p>
                 <p><strong>Format:</strong> Hybrid (In-person & Virtual)</p>
                 <p><strong>Expected Attendees:</strong> 500+</p>
@@ -168,9 +168,13 @@ const About = () => {
             >
               Register Now
             </Link>
-            <button className="btn-secondary">
+            <Link 
+              to="/to-be-updated"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} // Scroll to top on navigation
+              className="btn-secondary"
+            >
               View Program
-            </button>
+            </Link>
             </div>
           </div>
         </div>

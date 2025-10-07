@@ -145,13 +145,14 @@ const Submission = () => {
                 <p className="text-slate-600 dark:text-slate-300 mb-6">
                   Download the official IEEE template for paper formatting
                 </p>
-                <a
-                  href="#"
+                <Link 
+                  to="/to-be-updated"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} // Scroll to top on navigation
                   className="inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300"
                 >
                   <span>Download Template</span>
                   <ExternalLink size={18} />
-                </a>
+                </Link>
               </div>
             </motion.div>
           </div>

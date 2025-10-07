@@ -268,9 +268,13 @@ const Tracks = () => {
               >
                 Submit Your Paper
               </Link>
-              <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105">
+              <Link 
+                to="/to-be-updated"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} // Scroll to top on navigation
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105"
+              >
                 Download Guidelines
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>

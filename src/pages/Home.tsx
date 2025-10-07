@@ -468,10 +468,14 @@ const Home = () => {
                 <span>Register Now</span>
                 <ExternalLink size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
               </Link>
-              <button className="group flex items-center space-x-2 px-8 py-4 bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
+              <Link
+                to="/to-be-updated"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} // Scroll to top on navigation
+                className="group flex items-center space-x-2 px-8 py-4 bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
                 <span>Download Brochure</span>
                 <Download size={18} className="group-hover:rotate-12 transition-transform duration-300" />
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>

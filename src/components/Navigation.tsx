@@ -118,7 +118,9 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo Section */}
           <div className="flex items-center flex-shrink-0">
-            <Link to="/" className="flex items-center group">
+            <Link to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="flex items-center group">
               <div className="relative">
                 <img
                   src="/logo.png"
@@ -141,6 +143,7 @@ const Navigation = () => {
                 <Link
                   key={item.id}
                   to={item.path}
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${getNavLinkClass(isActive(item.path))}`}
                 >
                   {item.label}
@@ -171,6 +174,7 @@ const Navigation = () => {
                         <Link
                           key={item.id}
                           to={item.path}
+                          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                           className={`block w-full text-left px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200 ${isActive(item.path)
                               ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30'
                               : 'text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-700/50'
@@ -269,10 +273,14 @@ const Navigation = () => {
                 </Link>
               ))}
 
-              <button className="flex items-center space-x-2 w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-200 mt-4 font-medium">
+              <Link 
+                to="/to-be-updated"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} // Scroll to top on navigation
+                className="flex items-center space-x-2 w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-200 mt-4 font-medium"
+              >
                 <Download size={16} />
                 <span>Download Brochure</span>
-              </button>
+              </Link>
             </div>
           </div>
         )}
