@@ -1,7 +1,6 @@
 import { Star, Users, Trophy, Target, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-
 const sponsors = [
   { name: "Deakin University, Australia", logo: "/deakin.png" },
   { name: "University of Applied Sciences, Austria", logo: "/austria.png" },
@@ -9,36 +8,62 @@ const sponsors = [
   { name: "University of Warwick, United Kingdom", logo: "/warwick.png" },
   { name: "IEEE Delhi", logo: "/ieeedelhi.png" },
   { name: "IEEE Bangalore", logo: "/ieeebg.png" },
+  { name: "IEEE Computer Society", logo: "/ieeecs.png" },
+  { name: "IEEE Student Branch", logo: "/ieee-sb.png" },
+  { name: "IEEE Robotics and Automation Society", logo: "/ieee-ras.png" },
+  { name: "IEEE Sensors Council", logo: "/ieee-sen.png" },
 ];
 
 const Sponsorship = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-indigo-900/20">
 
-      {/* --- Hero Section --- */}
-      <section className="pt-32 pb-16 text-center">
-        <motion.h1
+      {/* --- Organized By Section --- */}
+      <section className="pt-32 pb-12 text-center">
+        <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6"
+          className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-8"
         >
-          Our Esteemed Sponsors
+          Organized By
+        </motion.h2>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex justify-center"
+        >
+          <img 
+            src="/muj.png" 
+            alt="Manipal University Jaipur" 
+            className="h-24 md:h-32 object-contain"
+          />
+        </motion.div>
+      </section>
+
+      {/* --- In Collaboration With Section --- */}
+      <section className="py-16">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 text-center"
+        >
+          In Collaboration With
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto"
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto text-center mb-16"
         >
           We are proud to be supported by leading universities and organizations worldwide
         </motion.p>
-      </section>
 
-      {/* --- Sponsors Grid --- */}
-      <section className="py-20">
+        {/* --- Sponsors Grid --- */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-12 items-center justify-items-center">
             {sponsors.map((sponsor, index) => (
               <motion.div
                 key={sponsor.name}
@@ -46,19 +71,48 @@ const Sponsorship = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex flex-col items-center space-y-4"
+                className="flex flex-col items-center space-y-4 w-full"
               >
                 <img 
-                  src={sponsor.logo}  // Direct reference from public folder
+                  src={sponsor.logo}
                   alt={sponsor.name} 
-                  className="h-16 sm:h-20 object-contain"
+                  className="h-20 object-contain"
                 />
-                <span className="text-center text-sm sm:text-base text-slate-700 dark:text-slate-300">
+                <span className="text-center text-sm text-slate-700 dark:text-slate-300 px-2">
                   {sponsor.name}
                 </span>
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* --- SDG Goals Section --- */}
+      <section className="py-16">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-12 text-center"
+        >
+          SDG Goals
+        </motion.h1>
+        
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex justify-center"
+          >
+            <img 
+              src="/sdggoals.png" 
+              alt="Sustainable Development Goals" 
+              className="w-full max-w-4xl object-contain rounded-lg"
+            />
+          </motion.div>
         </div>
       </section>
 
