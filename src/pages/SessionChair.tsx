@@ -32,7 +32,7 @@ const SessionChair = () => {
       ]
     },
     {
-      title: "Honorary Chair",
+      title: "Distinguished Chair",
       icon: <Star className="w-6 h-6" />,
       color: "from-orange-500 to-orange-600",
       members: [
@@ -56,6 +56,55 @@ const SessionChair = () => {
       color: "from-teal-500 to-teal-600",
       members: [
         { name: "Dr. Neha Chaudhary", affiliation: "Department of Computer Science and Engineering, Manipal University Jaipur, Jaipur, India" }
+      ]
+    },
+    {
+      title: "Advisory Committee",
+      icon: <MapPin className="w-6 h-6" />,
+      color: "from-gray-500 to-gray-600",
+      members: [
+        { name: "Prof Anchit Bijalwan", affiliation: "British University Vietnam" },
+        { name: "Dr. Anu Sayal", affiliation: "Taylor University, Malaysia" },
+        { name: "Dr. Abeda Dodamani", affiliation: "University of Eswatini, South Africa" },
+        { name: "Dr. Mark Leeson", affiliation: "University of Warwick, UK" },
+        { name: "Dr. Jennifer-Marieclaire Sturlese", affiliation: "University of Vienna" },
+        { name: "Dr. Kapil Gupta", affiliation: "University of Johannesburg, South Africa" },
+        { name: "Mr. Deepesh Garg", affiliation: "Google, Germany" },
+        { name: "Dr. Arun Kumar Singh", affiliation: "PNG University of Technology, Papua New Guinea" },
+        { name: "Dr. Jacqui Muller", affiliation: "Belgium Campus iTversity" },
+        { name: "Dr. Ajeet Pratap Singh", affiliation: "Cognizant Solutions, Germany" },
+        { name: "Prof. Bahman Javadi", affiliation: "Western Sydney University, Sydney, Australia" },
+        { name: "Dr. Shitharth Selvarajan", affiliation: "Leeds Beckett University, Leeds, U.K." },
+        { name: "Prof. Fatos Xhafa", affiliation: "Universitat Politècnica de Catalunya, Barcelona, Spain" },
+        { name: "Dr. Laia Subirats", affiliation: "Open University of Catalonia, Barcelona, Spain" },
+        { name: "Dr. Muhammad Fazal", affiliation: "Melbourne Institute of Technology, Australia" },
+        { name: "Prof. Muna Elsadig", affiliation: "Princess Nourah bint Abdulrahman University, Riyadh, Saudi Arabia" },
+        { name: "Mariyam Aysha Bivi", affiliation: "King Khalid University, Gregar, Saudi Arabia" },
+        { name: "Dr. Shakila Basheer", affiliation: "Princess Nourah bint Abdulrahman University, Riyadh, Saudi Arabia" },
+        { name: "Dr. Hasmat Malik", affiliation: "Universiti Teknologi Malaysia (UTM), Malaysia" },
+        { name: "Dr. Thippa Reddy Gadekallu", affiliation: "Jiaxing University, Jiaxing, China" },
+        { name: "Prof. Jaejeung Kim", affiliation: "Chungnam National University, Daejeon, South Korea" },
+        { name: "Dr. Saurabh Singh", affiliation: "Woosong University, Daejeon, South Korea" },
+        { name: "Prof. Mohammed Abdulaziz Alsubhi", affiliation: "University of Tabuk, Saudi Arabia" },
+        { name: "Prof. Abdullatif Saleh Alfaqiri", affiliation: "Taibah University, Madinah, Saudi Arabia" },
+        { name: "Dr. R. P. Sharma", affiliation: "NIT Arunachal Pradesh" },
+        { name: "Dr. Tapan K. Gandhi", affiliation: "IIT Delhi" },
+        { name: "Dr. Anshul", affiliation: "NIT Patna, India" },
+        { name: "Dr. Vandana Bharti", affiliation: "IIT Dharwad, India" },
+        { name: "Dr. Madhu Jain", affiliation: "IIT Roorkee, India" },
+        { name: "Dr. Manju Khari", affiliation: "JNU, Delhi, India" },
+        { name: "Dr. Kaushik Guha", affiliation: "NIT Slichar, Assam" },
+        { name: "Dr. Meenakshi Tripathi", affiliation: "MNIT, India" },
+        { name: "Dr. Emmanual Pilli", affiliation: "MNIT, Jaipur, India" },
+        { name: "Dr. Muzzammil Hussain", affiliation: "Central University of Rajasthan, India" },
+        { name: "Dr. Basant Agarwal", affiliation: "Central University of Rajasthan, India" },
+        { name: "Dr. Nithesh Nayak", affiliation: "MIT, Manipal, India" },
+        { name: "Dr. Ritesh Bhat", affiliation: "Rajalakshmi Engineering College, Chennai, India" },
+        { name: "Dr. Chandra Shekhar", affiliation: "BITS Pilani, India" },
+        { name: "Dr. Vikas Thada", affiliation: "Amity University, Gwalior, India" },
+        { name: "Dr Kamal Upreti", affiliation: "Christ University, Delhi" },
+        { name: "Mr. Sushil Kumar", affiliation: "Cisco, India" },
+        { name: "Mr. Prateek Agrawal", affiliation: "Macquarie Group, India" }
       ]
     },
     {

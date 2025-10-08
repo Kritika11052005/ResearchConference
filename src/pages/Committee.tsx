@@ -33,7 +33,8 @@ const Committee = () => {
       bgPattern: "bg-blue-50 dark:bg-blue-900/20",
       members: [
         { name: "Dr Mahesh Jangid", affiliation: "Department of Computer Science and Engineering, Manipal University Jaipur, Jaipur, India" },
-        { name: "Dr. Surbhi Sharma", affiliation: "Department of Computer Science and Engineering, Manipal University Jaipur, Jaipur, India" }
+        { name: "Dr. Amit Dwivedi", affiliation: "University of Warwick, UK" },
+        { name: "Dr. Lalit Garg", affiliation: "University of Malta, Malta" }
       ]
     },
     {
@@ -42,6 +43,7 @@ const Committee = () => {
       color: "from-purple-500 to-violet-600",
       bgPattern: "bg-purple-50 dark:bg-purple-900/20",
       members: [
+        { name: "Dr. Surbhi Sharma", affiliation: "Department of Computer Science and Engineering, Manipal University Jaipur, Jaipur, India" },
         { name: "Dr Aprna Tripathi", affiliation: "Manipal University Jaipur, Jaipur, India" }
       ]
     },
@@ -111,9 +113,11 @@ const Committee = () => {
       bgPattern: "bg-teal-50 dark:bg-teal-900/20",
       members: [
         { name: "Dr. Aprna Tripathi", affiliation: "Manipal University Jaipur, India" },
-        { name: "Dr. Shweta Gangrade", affiliation: "Manipal University Jaipur, India" },
         { name: "Ms. Kirti Paliwal", affiliation: "Manipal University Jaipur, India" },
-        { name: "Mr. Chandrapal Singh Dangi", affiliation: "Manipal University Jaipur, India" }
+        { name: "Mr. Chandrapal Singh Dangi", affiliation: "Manipal University Jaipur, India" },
+        { name: "Mr. Varun Narayan Jain", affiliation: "Manipal University Jaipur, India" },
+        { name: "Ms. Kritika Benjwal", affiliation: "Manipal University Jaipur, India" },
+        { name: "Ms. Gauri Sharma", affiliation: "Manipal University Jaipur, India" }
       ]
     },
     {
