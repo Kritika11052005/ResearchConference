@@ -2,7 +2,7 @@ import { Star, Users, Trophy, Target, CheckCircle, Mail, Phone, MapPin } from 'l
 import { motion } from 'framer-motion';
 
 const sponsors = [
-  { name: "Deakin University, Australia", logo: "/deakin.png" },
+  // { name: "Deakin University, Australia", logo: "/deakin.png" },
   { name: "University of Applied Sciences, Austria", logo: "/austria-new.png" },
   { name: "University of Malta, Malta, Europe", logo: "/malta.png" },
   { name: "University of Warwick, United Kingdom", logo: "/warwick.png" },
@@ -55,7 +55,7 @@ const Sponsorship = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 text-center relative z-10"
         >
-          In Collaboration With
+          In Collaboration With(Proposed)
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
