@@ -11,7 +11,7 @@ const sponsors = [
   { name: "IEEE Computer Society", logo: "/IEEE-CS_LogoTM-black.jpg" },
   { name: "IEEE Student Branch", logo: "/ieee-sb.jpg" },
   { name: "IEEE Robotics and Automation Society", logo: "/ieee-ras.png" },
-  { name: "IEEE Sensors Council", logo: "/ieee-sen.png" },
+  // { name: "IEEE Sensors Council", logo: "/ieee-sen.png" },
 ];
 
 const Sponsorship = () => {
