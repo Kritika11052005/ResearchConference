@@ -8,8 +8,8 @@ const sponsors = [
   { name: "University of Warwick, United Kingdom", logo: "/warwick.png" },
   // { name: "IEEE Delhi", logo: "/ieeedelhi.png" },
   // { name: "IEEE Bangalore", logo: "/ieeebg.png" },
-  { name: "IEEE Computer Society", logo: "/ieeecs.png" },
-  { name: "IEEE Student Branch", logo: "/ieee-sb.png" },
+  { name: "IEEE Computer Society", logo: "/IEEE-CS_LogoTM-black.jpg" },
+  { name: "IEEE Student Branch", logo: "/ieee-sb.jpg" },
   { name: "IEEE Robotics and Automation Society", logo: "/ieee-ras.png" },
   { name: "IEEE Sensors Council", logo: "/ieee-sen.png" },
 ];

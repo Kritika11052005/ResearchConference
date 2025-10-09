@@ -23,6 +23,7 @@ const Committee = () => {
       bgPattern: "bg-emerald-50 dark:bg-emerald-900/20",
       members: [
         { name: "Dr Gireesh Kumar", affiliation: "Department of Computer Science and Engineering, Manipal University Jaipur, Jaipur, India" },
+        { name: "Dr Mahesh Jangid", affiliation: "Department of Computer Science and Engineering, Manipal University Jaipur, Jaipur, India" },
         { name: "Dr Usha Jain", affiliation: "Department of Computer Science and Engineering, Manipal University Jaipur, Jaipur, India" }
       ]
     },
@@ -32,7 +33,7 @@ const Committee = () => {
       color: "from-blue-500 to-indigo-600",
       bgPattern: "bg-blue-50 dark:bg-blue-900/20",
       members: [
-        { name: "Dr Mahesh Jangid", affiliation: "Department of Computer Science and Engineering, Manipal University Jaipur, Jaipur, India" },
+        { name: "Dr. Surbhi Sharma", affiliation: "Department of Computer Science and Engineering, Manipal University Jaipur, Jaipur, India" },
         { name: "Dr. Amit Dwivedi", affiliation: "University of Warwick, UK" },
         { name: "Dr. Lalit Garg", affiliation: "University of Malta, Malta" }
       ]
@@ -43,8 +44,8 @@ const Committee = () => {
       color: "from-purple-500 to-violet-600",
       bgPattern: "bg-purple-50 dark:bg-purple-900/20",
       members: [
-        { name: "Dr. Surbhi Sharma", affiliation: "Department of Computer Science and Engineering, Manipal University Jaipur, Jaipur, India" },
-        { name: "Dr Aprna Tripathi", affiliation: "Manipal University Jaipur, Jaipur, India" }
+        { name: "Dr Aprna Tripathi", affiliation: "Manipal University Jaipur, Jaipur, India" },
+        { name: "Dr Richa Sharma", affiliation: "JK Lakshmipat University, Jaipur, India" }
       ]
     },
     {
