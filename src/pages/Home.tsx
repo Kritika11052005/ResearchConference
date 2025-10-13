@@ -61,7 +61,7 @@ const Home = () => {
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">
-              <span className="block mb-1">1st International Conference on</span>
+              <span className="block mb-1">International Conference on</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 font-bold">
                 Multidisciplinary Advances in Engineering, Artificial Intelligence
               </span>
