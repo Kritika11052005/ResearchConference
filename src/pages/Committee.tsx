@@ -35,9 +35,8 @@ const Committee = () => {
       members: [
         { name: "Dr. Amit Dwivedi", affiliation: "University of Warwick, UK" },
         { name: "Dr. Lalit Garg", affiliation: "University of Malta, Malta" },
-        { name: "Dr. Princy Randhawa", affiliation: "DSU, Bangalore, India" },
         { name: "Dr. Nithesh Naik", affiliation: "MIT, Manipal, India" },
-        { name: "Dr. Sumit Dhariwal", affiliation: "MITS, Gwalior, India" },
+        { name: "Dr. Surbhi Sharma", affiliation: "Department of Computer Science and Engineering, Manipal University Jaipur, Jaipur, India" },
       ]
     },
     {
@@ -47,7 +46,6 @@ const Committee = () => {
       bgPattern: "bg-purple-50 dark:bg-purple-900/20",
       members: [
         { name: "Dr Aprna Tripathi", affiliation: "Manipal University Jaipur, Jaipur, India" },
-        { name: "Dr. Surbhi Sharma", affiliation: "Department of Computer Science and Engineering, Manipal University Jaipur, Jaipur, India" },
       ]
     },
     {

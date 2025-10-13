@@ -126,7 +126,9 @@ const SessionChair = () => {
         { name: "Dr. Muzzammil Hussain", affiliation: "Central University of Rajasthan, Ajmer" },
         { name: "Dr. Sonal Jain", affiliation: "Sardar Vallabhbhai Patel University, India" },
         { name: "Dr. Roopashree Shailendra", affiliation: "B. M. S. College of Engineering, Bengaluru, India" },
-        { name: "Dr. Puneet Mittal", affiliation: "Amity University Punjab, Mohali, India" }
+        { name: "Dr. Puneet Mittal", affiliation: "Amity University Punjab, Mohali, India" },
+        { name: "Dr. Princy Randhawa", affiliation: "DSU, Bangalore, India" },
+        { name: "Dr. Sumit Dhariwal", affiliation: "MITS, Gwalior, India" },
       ]
     },
     {
@@ -136,7 +138,6 @@ const SessionChair = () => {
       members: [
         { name: "Dr. Vivek Singh Sikarwar", affiliation: "Manipal University Jaipur, India" },
         { name: "Dr. V. Vivek", affiliation: "Alliance University, Bengaluru, India" },
-        { name: "Dr. Puneet Mittal", affiliation: "Amity University Punjab, Mohali, India" },
         { name: "Dr. Ankur Panday", affiliation: "Manipal University Jaipur, Jaipur, India" }
       ]
     },

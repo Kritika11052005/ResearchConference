@@ -55,7 +55,7 @@ const Sponsorship = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 text-center relative z-10"
         >
-          In Collaboration With(Proposed)
+          In Collaboration With
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
